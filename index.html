@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCL Tournament — Gourjhamar</title>
+<meta name="description" content="PCL Tournament, Gourjhamar — Koal Cricket Stadium. Player registration & prize details.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="floodlights"></div>
+
+<div class="wrap">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="badge-row">
+      <span class="chip">🏏 Player Auction Tournament</span>
+    </div>
+    <h1>PCL TOURNAMENT <span>Gourjhamar</span></h1>
+    <div class="venue">📍 Venue: <b>Koal Cricket Stadium, Gourjhamar</b></div>
+  </header>
+
+  <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">🏏</span><div class="stitch-line"></div></div>
+
+  <!-- ================= PRIZES ================= -->
+  <section class="section" id="prizes">
+    <div class="section-head">
+      <span class="eyebrow">Prize Pool</span>
+      <h2>🏆 Prizes</h2>
+    </div>
+    <div class="scoreboard">
+      <div class="prize-grid">
+        <div class="prize-card winner">
+          <div class="icon">🏆</div>
+          <div class="tag">Winner</div>
+          <div class="amount">₹51,000</div>
+        </div>
+        <div class="prize-card">
+          <div class="icon">🥈</div>
+          <div class="tag">Runner-Up</div>
+          <div class="amount">₹25,000</div>
+        </div>
+        <div class="prize-card full">
+          <div class="icon">📺</div>
+          <div class="tag">Man of the Series</div>
+          <div class="amount small">32 Inch LED TV</div>
+        </div>
+        <div class="prize-card">
+          <div class="icon">🏏</div>
+          <div class="tag">Best Batsman</div>
+          <div class="amount small">LR Brand Bat</div>
+        </div>
+        <div class="prize-card">
+          <div class="icon">🎯</div>
+          <div class="tag">Best Bowler</div>
+          <div class="amount">₹1,500</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">🎯</span><div class="stitch-line"></div></div>
+
+  <!-- ================= RULES ================= -->
+  <section class="section" id="rules">
+    <div class="section-head">
+      <span class="eyebrow">Tournament Ke Niyam</span>
+      <h2>📋 Rules</h2>
+    </div>
+    <div class="rulebook">
+      <div class="rule"><div class="num">1</div><p>Sirf 8 teams hi tournament mein participate kar sakti hain.</p></div>
+      <div class="rule"><div class="num">2</div><p>Sirf 104 players hi registration kar sakte hain.</p></div>
+      <div class="rule"><div class="num">3</div><p>LBW ko chhodkar cricket ke sabhi niyam lagu honge.</p></div>
+      <div class="rule"><div class="num">4</div><p>Players auction (boli) ke through team mein khareede jaayenge.</p></div>
+      <div class="rule"><div class="num">5</div><p>Sirf panchayat ke players hi register kar sakte hain.</p></div>
+      <div class="rule"><div class="num">6</div><p>Sirf panchayat level ke players hi is tournament mein bhaag le sakte hain.</p></div>
+    </div>
+  </section>
+
+  <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">💳</span><div class="stitch-line"></div></div>
+
+  <!-- ================= PAYMENT ================= -->
+  <section class="section" id="payment">
+    <div class="section-head">
+      <span class="eyebrow">Registration Fees</span>
+      <h2>Pay & Register</h2>
+    </div>
+    <div class="pay-panel">
+      <div class="fee-tag"><small>Entry Fee</small>₹500 / Player</div>
+
+      <!--
+        ============================================================
+        QR CODE STRIP - swipe/scroll sideways for multiple QR codes.
+        ============================================================
+        HOW TO ADD YOUR QR:
+        1. Upload your QR image to this same folder and name it exactly: qr.jpg
+        2. It will automatically appear below (already wired up).
+
+        HOW TO ADD A SECOND QR CODE:
+        Find the SECOND QR CARD comment block further down, delete the
+        comment-open and comment-close markers around it, and upload a
+        second image named qr2.jpg. It will show up as a second card
+        that the user can swipe to (side-scroll).
+      -->
+      <div class="qr-scroll" id="qrScroll">
+        <div class="qr-card">
+          <img src="qr.jpg" alt="Scan to pay via UPI">
+          <div class="qr-label">Scan & Pay — UPI</div>
+        </div>
+
+        <!-- SECOND QR CARD START (delete this line and the END line below to enable)
+        <div class="qr-card">
+          <img src="qr2.jpg" alt="Scan to pay via UPI - alternate">
+          <div class="qr-label">Alternate QR</div>
+        </div>
+        SECOND QR CARD END -->
+      </div>
+      <div class="qr-hint">Scan the QR above, or tap the button below to pay directly</div>
+
+      <!--
+        PAY NOW BUTTON
+        This opens the user's UPI app with the payee UPI ID + amount
+        already filled in. Edit the UPI ID / name inside script.js
+        (top of the file — clearly marked) — do NOT edit this button.
+      -->
+      <a href="#" id="payNowBtn" class="pay-btn">💰 Pay ₹500 Now</a>
+      <div class="upi-note">Tapping this opens your UPI app (GPay / PhonePe / Paytm) with amount pre-filled.</div>
+    </div>
+  </section>
+
+  <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">📝</span><div class="stitch-line"></div></div>
+
+  <!-- ================= REGISTRATION FORM ================= -->
+  <section class="section" id="register">
+    <div class="section-head">
+      <span class="eyebrow">Player Registration</span>
+      <h2>Fill Your Details</h2>
+    </div>
+    <div class="form-panel">
+      <form id="regForm">
+        <div class="field">
+          <label for="playerName">Player Full Name</label>
+          <input type="text" id="playerName" name="playerName" required placeholder="e.g. Ravi Kumar">
+        </div>
+
+        <div class="field">
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number">
+        </div>
+
+        <div class="field">
+          <label for="village">Village / Panchayat</label>
+          <input type="text" id="village" name="village" required placeholder="Your panchayat name">
+        </div>
+
+        <div class="field">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" required min="10" max="60" placeholder="Your age">
+        </div>
+
+        <div class="field">
+          <label for="role">Playing Role</label>
+          <select id="role" name="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="Batsman">Batsman</option>
+            <option value="Bowler">Bowler</option>
+            <option value="All-Rounder">All-Rounder</option>
+            <option value="Wicket-Keeper">Wicket-Keeper</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Your Photo</label>
+          <label class="upload" id="playerPhotoLabel">
+            <input type="file" id="playerPhoto" name="playerPhoto" accept="image/*" required>
+            <div class="upload-icon">📷</div>
+            <div class="upload-text">Tap to upload your photo</div>
+            <div class="upload-filename" id="playerPhotoName"></div>
+          </label>
+        </div>
+
+        <div class="field">
+          <label>Payment Screenshot</label>
+          <label class="upload" id="screenshotLabel">
+            <input type="file" id="paymentScreenshot" name="paymentScreenshot" accept="image/*" required>
+            <div class="upload-icon">🧾</div>
+            <div class="upload-text">Tap to upload your ₹500 payment screenshot</div>
+            <div class="upload-filename" id="screenshotName"></div>
+          </label>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">Submit Registration</button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="contact">📞 9589337300</div>
+    <div class="assoc">Gourjhamar Cricket Association</div>
+    <div class="socials">
+      <span>📘</span>
+      <span>📷</span>
+    </div>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
