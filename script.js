@@ -9,8 +9,8 @@
    PAYEE_NAME  -> name that will show in the UPI app
    AMOUNT      -> registration fee amount (numbers only)
    ============================================================ */
-const UPI_ID     = "PUT-YOUR-UPI-ID-HERE@bank";   // <-- change this
-const PAYEE_NAME = "Gourjhamar Cricket Association"; // <-- change if needed
+const UPI_ID     = "9907917286-2@ybl";   // <-- change this
+const PAYEE_NAME = "SURENDRA LODHI "; // <-- change if needed
 const AMOUNT     = "500";                          // <-- change if fee changes
 
 /* ============================================================
