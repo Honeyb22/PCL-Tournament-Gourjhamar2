@@ -867,6 +867,8 @@ a.organiser-row{ color:var(--cream); }
   .live-dot{ animation:none; }
 }
 
+ /* FOOTER EDIT */
+
 
 .wait-note{
   text-align:center;
@@ -874,4 +876,31 @@ a.organiser-row{ color:var(--cream); }
   color:var(--cream-dim);
   margin-top:10px;
   line-height:1.4;
+}
+.dev-credit{
+  margin-top:24px;
+  padding-top:18px;
+  border-top:1px solid rgba(245,239,224,.1);
+  text-align:center;
+}
+.dev-line{
+  font-family:var(--font-score);
+  font-size:.82rem;
+  color:var(--cream-dim);
+  letter-spacing:.02em;
+}
+.dev-line b{
+  color:var(--floodlight);
+  font-weight:600;
+}
+.dev-contact{
+  font-size:.78rem;
+  color:var(--cream-dim);
+  margin-top:4px;
+}
+.copyright{
+  font-size:.72rem;
+  color:var(--cream-dim);
+  opacity:.7;
+  margin-top:4px;
 }
