@@ -9,8 +9,8 @@
    PAYEE_NAME  -> name that will show in the UPI app
    AMOUNT      -> registration fee amount (numbers only)
    ============================================================ */
-const UPI_ID     = "9907917286-2@ybl";   // <-- change this
-const PAYEE_NAME = "SURENDRA LODHI "; // <-- change if needed
+const UPI_ID     = "PUT-YOUR-UPI-ID-HERE@bank";   // <-- change this
+const PAYEE_NAME = "Gourjhamar Cricket Association"; // <-- change if needed
 const AMOUNT     = "500";                          // <-- change if fee changes
 
 /* ============================================================
@@ -125,3 +125,38 @@ form.addEventListener("submit", async function (e) {
     submitBtn.disabled = false;
   }
 });
+
+/* ---------------- Countdown Timer -> 31 August ---------------- */
+const countdownTarget = new Date("2026-08-31T23:59:59").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = countdownTarget - now;
+
+  const box = document.getElementById("countdownTimer");
+  if (!box) return;
+
+  if (distance <= 0) {
+    document.getElementById("cdDays").textContent = "00";
+    document.getElementById("cdHours").textContent = "00";
+    document.getElementById("cdMins").textContent = "00";
+    document.getElementById("cdSecs").textContent = "00";
+    document.querySelector(".countdown-label").textContent = "❌ Registration Closed";
+    document.querySelector(".countdown-box").classList.add("expired");
+    clearInterval(countdownInterval);
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("cdDays").textContent = String(days).padStart(2, "0");
+  document.getElementById("cdHours").textContent = String(hours).padStart(2, "0");
+  document.getElementById("cdMins").textContent = String(mins).padStart(2, "0");
+  document.getElementById("cdSecs").textContent = String(secs).padStart(2, "0");
+}
+
+updateCountdown();
+const countdownInterval = setInterval(updateCountdown, 1000);
