@@ -20,7 +20,7 @@ const AMOUNT     = "500";                          // <-- change if fee changes
    paste the deployment URL here. It looks like:
    https://script.google.com/macros/s/XXXXXXXXXXXX/exec
    ============================================================ */
-const SCRIPT_URL = "PUT-YOUR-APPS-SCRIPT-WEB-APP-URL-HERE";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw-D6HlBHlwXAjnq_QzxI5xueBeQ4vBVrTbRC5M4UhYXGYi95ETMfqkFSKh4h1zBYxxrw/exec";
 
 
 /* ---------------- Pay Now button -> UPI deep link ---------------- */
