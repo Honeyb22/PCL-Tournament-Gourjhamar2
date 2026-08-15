@@ -9,47 +9,28 @@
 </head>
 <body>
 
-  <!-- ================= UNDER DEVELOPMENT NOTICE ================= 
-<div class="site-pause-overlay" id="sitePauseOverlay">
-    <div class="site-pause-box">
+  <!-- ================= TICKER TOP RED LINE ================= -->
 
-        <div class="pause-icon">🚧</div>
-
-        <h1>कृपया अभी पंजीकरण न करें</h1>
-
-        <h2>वेबसाइट जल्द ही शुरू होगी</h2>
-
-        <p>
-            हमारी वेबसाइट अभी <strong>निर्माणाधीन / विकासाधीन</strong> है।
-        </p>
-
-        <p>
-            फिलहाल <strong>पंजीकरण प्रक्रिया सक्रिय नहीं है</strong>।
-            कृपया अभी अपना नाम, मोबाइल नंबर, पता या अन्य कोई व्यक्तिगत जानकारी दर्ज न करें।
-        </p>
-
-        <p>
-            वेबसाइट पर भुगतान का विकल्प दिखाई दे सकता है, लेकिन
-            <strong>कृपया अभी कोई भुगतान या पंजीकरण न करें।</strong>
-        </p>
-
-        <div class="pause-warning">
-            ⚠️ पंजीकरण शुरू होने के बाद ही अपनी जानकारी दर्ज करें।
-        </div>
-
-        <div class="pause-status">
-            <span class="status-dot"></span>
-            वेबसाइट जल्द ही लॉन्च होगी
-        </div>
-
-        <p class="pause-thanks">
-            आपके सहयोग और धैर्य के लिए धन्यवाद। 🙏
-        </p>
-
-    </div>
+  <div class="ticker-bar">
+  <div class="ticker-track">
+    <span>🏏 क्रिकेट मैच की तारीख जल्दी ही घोषित की जायेगी</span>
+    <span>🏏 क्रिकेट मैच की तारीख जल्दी ही घोषित की जायेगी</span>
+  </div>
 </div>
-<!-- ============================================================ -->
-  -->
+
+<!-- ================= NAVBAR ================= -->
+
+  <nav class="quicknav" id="quicknav">
+  <div class="quicknav-scroll">
+    <a href="#prizes" class="quicknav-link" data-target="prizes"><span>Prizes</span></a>
+    <a href="#payment" class="quicknav-link" data-target="payment"><span>Pay</span></a>
+    <a href="#register" class="quicknav-link" data-target="register"><span>Register</span></a>
+    <a href="#owners" class="quicknav-link" data-target="owners"><span>Owners</span></a>
+    <a href="#sponsors" class="quicknav-link" data-target="sponsors"><span>Sponsors</span></a>
+    <a href="#organiser" class="quicknav-link" data-target="organiser"><span>Organiser</span></a>
+  </div>
+</nav>
+  
 
 <div class="floodlights"></div>
 
@@ -61,7 +42,27 @@
       <span class="chip">🏏 Player Auction Tournament</span>
     </div>
     <h1>PCL TOURNAMENT <span>Gourjhamar</span></h1>
-    <div class="venue">📍 Venue: <b>Koal Cricket Stadium, Gourjhamar</b></div>
+    <div class="venue">📍 Venue: <b>कोल क्रिकेट स्टेडियम, गौरझामर </b></div>
+
+
+    <!-- ================= COUNTDOWN ================= -->
+
+    <div class="countdown-box">
+      <div class="countdown-label">⏳ Registration Closes In</div>
+      <div class="countdown-timer" id="countdownTimer">
+        <div class="cd-unit"><span id="cdDays">00</span><small>Days</small></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span id="cdHours">00</span><small>Hrs</small></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span id="cdMins">00</span><small>Min</small></div>
+        <div class="cd-sep">:</div>
+        <div class="cd-unit"><span id="cdSecs">00</span><small>Sec</small></div>
+      </div>
+      <div class="countdown-date">Last Date: 31 August</div>
+    </div>
+
+    <div class="venue auction-venue"> Auction Place: <b>सीताराम पैलिस, गौरझामर</b></div>
+
   </header>
 
   <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">🏏</span><div class="stitch-line"></div></div>
@@ -77,12 +78,12 @@
         <div class="prize-card winner">
           <div class="icon">🏆</div>
           <div class="tag">Winner</div>
-          <div class="amount">₹51,000</div>
+          <div class="amount">₹41,000</div>
         </div>
         <div class="prize-card">
           <div class="icon">🥈</div>
           <div class="tag">Runner-Up</div>
-          <div class="amount">₹25,000</div>
+          <div class="amount">₹21,000</div>
         </div>
         <div class="prize-card full">
           <div class="icon">📺</div>
@@ -108,17 +109,23 @@
   <!-- ================= RULES ================= -->
   <section class="section" id="rules">
     <div class="section-head">
-      <span class="eyebrow">Tournament Ke Niyam</span>
+      <span class="eyebrow">टूर्नामेंट के नियम </span>
       <h2>📋 Rules</h2>
     </div>
     <div class="rulebook">
-    <div class="rule"><div class="num">1</div><p>केवल 10 टीमें ही टूर्नामेंट में भाग ले सकती हैं।</p></div>
+    <div class="rule"><div class="num">1</div><p>केवल 8 टीमें ही टूर्नामेंट में भाग ले सकती हैं।</p></div>
   <div class="rule"><div class="num">2</div><p>केवल 130 खिलाड़ी ही पंजीकरण (रजिस्ट्रेशन) कर सकते हैं।</p></div>
   <div class="rule"><div class="num">3</div><p>LBW को छोड़कर क्रिकेट के सभी नियम लागू होंगे।</p></div>
   <div class="rule"><div class="num">4</div><p>खिलाड़ियों को नीलामी (बोली) के माध्यम से टीम में खरीदा जाएगा।</p></div>
   <div class="rule"><div class="num">5</div><p>केवल पंचायत के खिलाड़ी ही पंजीकरण कर सकते हैं।</p></div>
-  <div class="rule"><div class="num">6</div><p>केवल पंचायत स्तर के खिलाड़ी ही इस टूर्नामेंट में भाग ले सकते हैं।</p></div>
-    </div>
+  <div class="rule"><div class="num">6</div><p>मैच WOODS बट्स बोल से होगा </p></div>
+  <div class="rule"><div class="num">7</div><p>सारे मैच 8-8 ओवर के होंगे।</p></div>
+  <div class="rule"><div class="num">8</div><p>वर्ल्ड कप फॉर्मैट के अनुसार।</p></div>
+  <div class="rule"><div class="num">9</div><p>दो ग्रुप , हर ग्रुप मैं 5 टीमे ।</p></div>
+  <div class="rule"><div class="num">9</div><p>दो ग्रुप , हर ग्रुप मैं 5 टीमे ।</p></div>
+  <div class="rule"><div class="num">10</div><p>हर ग्रुप की टॉप 2 टीमे सेमीफाइनल के लिए चुनी जाएगी ।</p></div>
+  <div class="rule"><div class="num">11</div><p>अंपायर का डिसिशन फाइनल ।</p></div>
+</div>
   </section>
 
   <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">💳</span><div class="stitch-line"></div></div>
@@ -239,12 +246,138 @@
     </div>
   </section>
 
+  <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">🏏</span><div class="stitch-line"></div></div>
+
+  <!-- ================= OWNERS ================= -->
+  <section class="section" id="owners">
+    <div class="section-head">
+      <span class="eyebrow">Team Owners</span>
+      <h2>🏏 Owners</h2>
+    </div>
+    <!-- Photo upload: owner1.jpg, owner2.jpg ... owner10.jpg — same folder -->
+    <div class="owners-grid">
+      <div class="owner-card">
+        <div class="owner-photo"><img src="owner1.jpg" alt="Owner 1" onerror="this.parentElement.classList.add('no-photo')"></div>
+        <div class="owner-name">Owner Name 1</div>
+        <div class="owner-team">Team 1</div>
+      </div>
+      <div class="owner-card">
+        <div class="owner-photo"><img src="owner2.jpg" alt="Owner 2" onerror="this.parentElement.classList.add('no-photo')"></div>
+        <div class="owner-name">Owner Name 2</div>
+        <div class="owner-team">Team 2</div>
+      </div>
+      <div class="owner-card">
+        <div class="owner-photo"><img src="owner3.jpg" alt="Owner 3" onerror="this.parentElement.classList.add('no-photo')"></div>
+        <div class="owner-name">Owner Name 3</div>
+        <div class="owner-team">Team 3</div>
+      </div>
+      <div class="owner-card">
+        <div class="owner-photo"><img src="owner4.jpg" alt="Owner 4" onerror="this.parentElement.classList.add('no-photo')"></div>
+        <div class="owner-name">Owner Name 4</div>
+        <div class="owner-team">Team 4</div>
+      </div>
+      <div class="owner-card">
+        <div class="owner-photo"><img src="owner5.jpg" alt="Owner 5" onerror="this.parentElement.classList.add('no-photo')"></div>
+        <div class="owner-name">Owner Name 5</div>
+        <div class="owner-team">Team 5</div>
+      </div>
+      <div class="owner-card">
+        <div class="owner-photo"><img src="owner6.jpg" alt="Owner 6" onerror="this.parentElement.classList.add('no-photo')"></div>
+        <div class="owner-name">Owner Name 6</div>
+        <div class="owner-team">Team 6</div>
+      </div>
+      <div class="owner-card">
+        <div class="owner-photo"><img src="owner7.jpg" alt="Owner 7" onerror="this.parentElement.classList.add('no-photo')"></div>
+        <div class="owner-name">Owner Name 7</div>
+        <div class="owner-team">Team 7</div>
+      </div>
+      <div class="owner-card">
+        <div class="owner-photo"><img src="owner8.jpg" alt="Owner 8" onerror="this.parentElement.classList.add('no-photo')"></div>
+        <div class="owner-name">Owner Name 8</div>
+        <div class="owner-team">Team 8</div>
+      </div>
+      <!-- <div class="owner-card">
+        <div class="owner-photo"><img src="owner9.jpg" alt="Owner 9" onerror="this.parentElement.classList.add('no-photo')"></div>
+        <div class="owner-name">Owner Name 9</div>
+        <div class="owner-team">Team 9</div>
+      </div>
+      <div class="owner-card">
+        <div class="owner-photo"><img src="owner10.jpg" alt="Owner 10" onerror="this.parentElement.classList.add('no-photo')"></div>
+        <div class="owner-name">Owner Name 10</div>
+        <div class="owner-team">Team 10</div>
+      </div> -->
+    </div>
+  </section>
+
+  <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">🤝</span><div class="stitch-line"></div></div>
+
+  <!-- ================= SPONSORS ================= -->
+  <section class="section" id="sponsors">
+    <div class="section-head">
+      <span class="eyebrow">Our Sponsors</span>
+      <h2>🤝 Sponsors</h2>
+    </div>
+    <!-- Logo upload: sponsor1.jpg ... sponsor6.jpg — same folder. Add/remove cards as needed. -->
+    <div class="sponsors-grid">
+      <div class="sponsor-card">
+        <div class="sponsor-logo"><img src="sponsor1.jpg" alt="Sponsor 1" onerror="this.parentElement.classList.add('no-logo')"></div>
+        <div class="sponsor-name">Sponsor Name 1</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-logo"><img src="sponsor2.jpg" alt="Sponsor 2" onerror="this.parentElement.classList.add('no-logo')"></div>
+        <div class="sponsor-name">Sponsor Name 2</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-logo"><img src="sponsor3.jpg" alt="Sponsor 3" onerror="this.parentElement.classList.add('no-logo')"></div>
+        <div class="sponsor-name">Sponsor Name 3</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-logo"><img src="sponsor4.jpg" alt="Sponsor 4" onerror="this.parentElement.classList.add('no-logo')"></div>
+        <div class="sponsor-name">Sponsor Name 4</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-logo"><img src="sponsor5.jpg" alt="Sponsor 5" onerror="this.parentElement.classList.add('no-logo')"></div>
+        <div class="sponsor-name">Sponsor Name 5</div>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-logo"><img src="sponsor6.jpg" alt="Sponsor 6" onerror="this.parentElement.classList.add('no-logo')"></div>
+        <div class="sponsor-name">Sponsor Name 6</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">👤</span><div class="stitch-line"></div></div>
+
+  <!-- ================= ORGANISER ================= -->
+  <section class="section" id="organiser">
+    <div class="section-head">
+      <span class="eyebrow">Contact & Enquiries</span>
+      <h2>Organiser</h2>
+    </div>
+    <!-- Photo upload: organiser.jpg — same folder. Edit name/shop/number/address text directly below. -->
+    <div class="organiser-card">
+      <div class="organiser-photo">
+        <img src="organiser.jpg" alt="Organiser photo" onerror="this.parentElement.classList.add('no-photo')">
+      </div>
+      <div class="organiser-info">
+        <div class="organiser-name">Pravanshu Patkar</div>
+        <div class="organiser-shop">जय स्पोर्ट गौरझामर </div>
+        <a href="tel:9589337300" class="organiser-row">
+          <span class="organiser-icon">📞</span> 9589337300
+        </a>
+        <div class="organiser-row">
+          <span class="organiser-icon">📍</span> सड़खेरा रोड , गौरझामर 
+        </div>
+      </div>
+      <a href="tel:9589337300" class="organiser-call">Call Organiser</a>
+    </div>
+  </section>
+
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="contact">📞 9589337300</div>
     <div class="assoc">Gourjhamar Cricket Association</div>
-    <H3>ALL RIGHTS RESERVED BY </H3>
-    <H5>HONEY SONI</H5>
+    <H3>ALL RIGHTS RESERVED BY :- HONEY SONI </H3>
     <div class="socials">
       <span>📘</span>
       <span>📷</span>
