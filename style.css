@@ -866,3 +866,12 @@ a.organiser-row{ color:var(--cream); }
 @media (prefers-reduced-motion: reduce){
   .live-dot{ animation:none; }
 }
+
+
+.wait-note{
+  text-align:center;
+  font-size:.78rem;
+  color:var(--cream-dim);
+  margin-top:10px;
+  line-height:1.4;
+}
