@@ -460,7 +460,7 @@ img{ max-width:100%; display:block; }
 
 /* =========================================================
    WEBSITE TEMPORARILY PAUSED / UNDER DEVELOPMENT
-   ========================================================= */
+   ========================================================= 
 
 .site-pause-overlay {
     position: fixed;
@@ -624,7 +624,7 @@ img{ max-width:100%; display:block; }
 }
 
 
-/* ================= ANIMATIONS ================= */
+/* ================= ANIMATIONS ================= 
 
 @keyframes pauseBoxIn {
 
@@ -657,7 +657,7 @@ img{ max-width:100%; display:block; }
 }
 
 
-/* ================= MOBILE ================= */
+/* ================= MOBILE ================= 
 
 @media (max-width: 600px) {
 
@@ -690,3 +690,5 @@ img{ max-width:100%; display:block; }
     }
 
 }
+
+ */
