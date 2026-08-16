@@ -754,11 +754,11 @@ a.organiser-row{ color:var(--cream); }
 .organiser-card{
   padding:20px 14px;
 }
-.organiser-card-center{
+/*.organiser-card-center{
   grid-column:1 / -1;
   max-width:calc(50% - 7px);
   margin:0 auto;
-}
+}*/
 .organiser-photo{
   width:84px; height:84px;
 }
@@ -1014,4 +1014,53 @@ a.organiser-row{ color:var(--cream); }
   font-size:.72rem;
   color:var(--cream-dim);
   margin-top:2px;
+}
+
+
+/* ================= BRAND AMBASSADOR ================= */
+.ambassador-card{
+  background:linear-gradient(165deg, var(--night-2), var(--night-3));
+  border:1px solid rgba(255,201,60,.25);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-deep);
+  padding:30px 20px;
+  text-align:center;
+}
+.ambassador-photo{
+  width:150px; height:150px;
+  border-radius:50%;
+  margin:0 auto 18px;
+  overflow:hidden;
+  border:4px solid var(--floodlight);
+  box-shadow:0 10px 30px rgba(255,201,60,.3);
+  background:var(--night);
+  position:relative;
+}
+.ambassador-photo img{ width:100%; height:100%; object-fit:cover; }
+.ambassador-photo.no-photo img{ display:none; }
+.ambassador-photo.no-photo::before{
+  content:"👤";
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  font-size:3.2rem;
+}
+.ambassador-name{
+  font-family:var(--font-display);
+  font-weight:400;
+  font-size:1.6rem;
+  letter-spacing:.02em;
+  color:var(--cream);
+}
+.ambassador-tag{
+  display:inline-block;
+  margin-top:10px;
+  font-family:var(--font-score);
+  font-weight:700;
+  font-size:.8rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--night);
+  background:linear-gradient(135deg, var(--floodlight), var(--floodlight-2));
+  padding:6px 18px;
+  border-radius:999px;
 }
