@@ -195,6 +195,26 @@
     </div>
   </section>
 
+  <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">📲</span><div class="stitch-line"></div></div>
+
+  <!-- ================= SOCIAL LINKS ================= -->
+  <section class="section" id="social">
+    <div class="section-head">
+      <span class="eyebrow">Stay Connected</span>
+      <h2>Join Us</h2>
+    </div>
+    <div class="social-grid">
+      <a href="https://chat.whatsapp.com/EVYSmc2tk7J5RqmkYO0sqC?s=cl&p=a&ilr=1" target="_blank" rel="noopener" class="social-card">
+        <img src="whatsapp.png" alt="WhatsApp Group">
+        <span>WhatsApp Group</span>
+      </a>
+      <a href="https://youtube.com/@likergaming?si=TWZhZ6_O1MfGJOFC" target="_blank" rel="noopener" class="social-card">
+        <img src="youtube.png" alt="YouTube Channel">
+        <span>YouTube Channel + LIVE</span>
+      </a>
+    </div>
+  </section>
+
   <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">📝</span><div class="stitch-line"></div></div>
 
   <!-- ================= REGISTRATION FORM ================= -->
@@ -266,7 +286,6 @@
         </div>
 
         <button type="submit" class="submit-btn" id="submitBtn">Submit Registration</button>
-        <div class="wait-note">⏳ जब तक फॉर्म सबमिट न हो, तब तक कृपया इंतज़ार करें।</div>
         <div class="form-status" id="formStatus"></div>
       </form>
     </div>
@@ -275,106 +294,209 @@
   <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">🏏</span><div class="stitch-line"></div></div>
 
   <!-- ================= OWNERS ================= -->
-  <section class="section" id="owners">
-    <div class="section-head">
-      <span class="eyebrow">Team Owners</span>
-      <h2>🏏 Owners</h2>
+<section class="section" id="owners">
+  <div class="section-head">
+    <span class="eyebrow">Team Owners</span>
+    <h2>🏏 Owners</h2>
+  </div>
+
+  <!-- Photo upload: owner1.jpg, owner2.jpg ... owner10.jpg — same folder -->
+  <div class="owners-grid">
+
+    <!-- Owner 1 -->
+    <div class="owner-card">
+      <div class="owner-photo">
+        <img src="owner1.jpg" alt="Owner 1" class="owner-img"
+             onerror="this.parentElement.classList.add('no-photo')">
+      </div>
+      <div class="owner-name">GOVIND SAKWAR</div>
+      <div class="owner-team">GK-11 DEORI</div>
+      <div class="owner-phone"> 6260273593</div>
+      <div class="owner-business">GK TOUR & TRAVELS DEORI</div>
     </div>
-    <!-- Photo upload: owner1.jpg, owner2.jpg ... owner10.jpg — same folder -->
-    <div class="owners-grid">
-      <div class="owner-card">
-        <div class="owner-photo"><img src="owner1.jpg" alt="Owner 1" onerror="this.parentElement.classList.add('no-photo')"></div>
-        <div class="owner-name">Owner Name 1</div>
-        <div class="owner-team">Team 1</div>
+
+    <!-- Owner 2 -->
+    <div class="owner-card">
+      <div class="owner-photo">
+        <img src="owner2.jpg" alt="Owner 2" class="owner-img"
+             onerror="this.parentElement.classList.add('no-photo')">
       </div>
-      <div class="owner-card">
-        <div class="owner-photo"><img src="owner2.jpg" alt="Owner 2" onerror="this.parentElement.classList.add('no-photo')"></div>
-        <div class="owner-name">Owner Name 2</div>
-        <div class="owner-team">Team 2</div>
-      </div>
-      <div class="owner-card">
-        <div class="owner-photo"><img src="owner3.jpg" alt="Owner 3" onerror="this.parentElement.classList.add('no-photo')"></div>
-        <div class="owner-name">Owner Name 3</div>
-        <div class="owner-team">Team 3</div>
-      </div>
-      <div class="owner-card">
-        <div class="owner-photo"><img src="owner4.jpg" alt="Owner 4" onerror="this.parentElement.classList.add('no-photo')"></div>
-        <div class="owner-name">Owner Name 4</div>
-        <div class="owner-team">Team 4</div>
-      </div>
-      <div class="owner-card">
-        <div class="owner-photo"><img src="owner5.jpg" alt="Owner 5" onerror="this.parentElement.classList.add('no-photo')"></div>
-        <div class="owner-name">Owner Name 5</div>
-        <div class="owner-team">Team 5</div>
-      </div>
-      <div class="owner-card">
-        <div class="owner-photo"><img src="owner6.jpg" alt="Owner 6" onerror="this.parentElement.classList.add('no-photo')"></div>
-        <div class="owner-name">Owner Name 6</div>
-        <div class="owner-team">Team 6</div>
-      </div>
-      <div class="owner-card">
-        <div class="owner-photo"><img src="owner7.jpg" alt="Owner 7" onerror="this.parentElement.classList.add('no-photo')"></div>
-        <div class="owner-name">Owner Name 7</div>
-        <div class="owner-team">Team 7</div>
-      </div>
-      <div class="owner-card">
-        <div class="owner-photo"><img src="owner8.jpg" alt="Owner 8" onerror="this.parentElement.classList.add('no-photo')"></div>
-        <div class="owner-name">Owner Name 8</div>
-        <div class="owner-team">Team 8</div>
-      </div>
-      <!-- <div class="owner-card">
-        <div class="owner-photo"><img src="owner9.jpg" alt="Owner 9" onerror="this.parentElement.classList.add('no-photo')"></div>
-        <div class="owner-name">Owner Name 9</div>
-        <div class="owner-team">Team 9</div>
-      </div>
-      <div class="owner-card">
-        <div class="owner-photo"><img src="owner10.jpg" alt="Owner 10" onerror="this.parentElement.classList.add('no-photo')"></div>
-        <div class="owner-name">Owner Name 10</div>
-        <div class="owner-team">Team 10</div>
-      </div> -->
+      <div class="owner-name">AJMER KHAN</div>
+      <div class="owner-team">ARYAN 11 BEENA</div>
+      <div class="owner-phone">8770980306</div>
+      <div class="owner-business">AJMER TENT & DJ BEENA</div>
     </div>
-  </section>
+
+    <!-- Owner 3 -->
+    <div class="owner-card">
+      <div class="owner-photo">
+        <img src="owner3.jpg" alt="Owner 3" class="owner-img"
+             onerror="this.parentElement.classList.add('no-photo')">
+      </div>
+      <div class="owner-name">SONU KHAN</div>
+      <div class="owner-team">HUNTER CRICKET CLUB</div>
+      <div class="owner-phone">9806994088</div>
+      <div class="owner-business">HOTAL TAJ</div>
+    </div>
+
+    <!-- Owner 4 -->
+    <div class="owner-card">
+      <div class="owner-photo">
+        <img src="owner4.jpg" alt="Owner 4" class="owner-img"
+             onerror="this.parentElement.classList.add('no-photo')">
+      </div>
+      <div class="owner-name">AAKASH VISHVKARMA</div>
+      <div class="owner-team">11 STAR ⭐ DEORI</div>
+      <div class="owner-phone">6261687885</div>
+      <div class="owner-business">VISHVKARMA HARDWARE DEORI</div>
+    </div>
+
+    <!-- Owner 5 -->
+    <div class="owner-card">
+      <div class="owner-photo">
+        <img src="owner5.jpg" alt="Owner 5" class="owner-img"
+             onerror="this.parentElement.classList.add('no-photo')">
+      </div>
+      <div class="owner-name">CHOTU RAJA BARKOTI</div>
+      <div class="owner-team">RAJA 11 👑</div>
+      <div class="owner-phone">9399679815</div>
+      <div class="owner-business">MA NARMADA BORWELL BARKOTI</div>
+    </div>
+
+    <!-- Owner 6 -->
+    <div class="owner-card">
+      <div class="owner-photo">
+        <img src="owner6.jpg" alt="Owner 6" class="owner-img"
+             onerror="this.parentElement.classList.add('no-photo')">
+      </div>
+      <div class="owner-name">SHIVHAM CHOUBEY</div>
+      <div class="owner-team">BAJRANG 11</div>
+      <div class="owner-phone">7489334637</div>
+      <div class="owner-business">ROAD CONTRACTOR</div>
+    </div>
+
+    <!-- Owner 7 -->
+    <div class="owner-card">
+      <div class="owner-photo">
+        <img src="owner7.jpg" alt="Owner 7" class="owner-img"
+             onerror="this.parentElement.classList.add('no-photo')">
+      </div>
+      <div class="owner-name">Owner Name 7</div>
+      <div class="owner-team">Team 7</div>
+      <div class="owner-phone">📞 9589337300</div>
+      <div class="owner-business">Business Name 7</div>
+    </div>
+
+    <!-- Owner 8 -->
+    <div class="owner-card">
+      <div class="owner-photo">
+        <img src="owner8.jpg" alt="Owner 8" class="owner-img"
+             onerror="this.parentElement.classList.add('no-photo')">
+      </div>
+      <div class="owner-name">Owner Name 8</div>
+      <div class="owner-team">Team 8</div>
+      <div class="owner-phone">📞 9589337300</div>
+      <div class="owner-business">Business Name 8</div>
+    </div>
+
+    <!-- Owner 9
+    <div class="owner-card">
+      <div class="owner-photo">
+        <img src="owner9.jpg" alt="Owner 9" class="owner-img"
+             onerror="this.parentElement.classList.add('no-photo')">
+      </div>
+      <div class="owner-name">Owner Name 9</div>
+      <div class="owner-team">Team 9</div>
+      <div class="owner-phone">📞 9589337300</div>
+      <div class="owner-business">Business Name 9</div>
+    </div>
+
+     Owner 10 
+    <div class="owner-card">
+      <div class="owner-photo">
+        <img src="owner10.jpg" alt="Owner 10" class="owner-img"
+             onerror="this.parentElement.classList.add('no-photo')">
+      </div>
+      <div class="owner-name">Owner Name 10</div>
+      <div class="owner-team">Team 10</div>
+      <div class="owner-phone">📞 9589337300</div>
+      <div class="owner-business">Business Name 10</div>
+    </div> -->
+
+  </div>
+</section>
 
   <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">🤝</span><div class="stitch-line"></div></div>
 
-  <!-- ================= SPONSORS ================= -->
+ <!-- ================= SPONSORS ================= -->
   <section class="section" id="sponsors">
     <div class="section-head">
       <span class="eyebrow">Our Sponsors</span>
       <h2>🤝 Sponsors</h2>
     </div>
-    <!-- Logo upload: sponsor1.jpg ... sponsor6.jpg — same folder. Add/remove cards as needed. -->
+    <!--
+      Each sponsor has 3 images: owner photo + 2 shop photos.
+      Upload as: sponsor1_1.jpg, sponsor1_2.jpg, sponsor1_3.jpg (sponsor 1)
+                 sponsor2_1.jpg, sponsor2_2.jpg, sponsor2_3.jpg (sponsor 2)
+                 ...and so on till sponsor4.
+      Arrow buttons cycle images in a loop. Tap image to expand full-screen
+      with its own arrows + close (X).
+    -->
     <div class="sponsors-grid">
-      <div class="sponsor-card">
-        <div class="sponsor-logo"><img src="sponsor1.jpg" alt="Sponsor 1" onerror="this.parentElement.classList.add('no-logo')"></div>
-        <div class="sponsor-name">Sponsor Name 1</div>
+
+      <div class="sponsor-card" data-sponsor-id="1">
+        <div class="sponsor-carousel">
+          <button type="button" class="sp-arrow sp-prev" aria-label="Previous image">‹</button>
+          <img src="sponsor1_1.jpg" alt="Sponsor 1" class="sp-img" data-images="sponsor1_1.jpg,sponsor1_2.jpg,sponsor1_3.jpg" data-index="0" onerror="this.src='';this.parentElement.parentElement.classList.add('no-logo')">
+          <button type="button" class="sp-arrow sp-next" aria-label="Next image">›</button>
+        </div>
+        <div class="sponsor-name">JITENDRA SONI JI</div>
+        <div class="sponsor-business">माँ हरसिद्धि मोबाईल गौरझामर </div>
       </div>
-      <div class="sponsor-card">
-        <div class="sponsor-logo"><img src="sponsor2.jpg" alt="Sponsor 2" onerror="this.parentElement.classList.add('no-logo')"></div>
-        <div class="sponsor-name">Sponsor Name 2</div>
+
+      <div class="sponsor-card" data-sponsor-id="2">
+        <div class="sponsor-carousel">
+          <button type="button" class="sp-arrow sp-prev" aria-label="Previous image">‹</button>
+          <img src="sponsor2_1.jpg" alt="Sponsor 2" class="sp-img" data-images="sponsor2_1.jpg,sponsor2_2.jpg,sponsor2_3.jpg" data-index="0" onerror="this.src='';this.parentElement.parentElement.classList.add('no-logo')">
+          <button type="button" class="sp-arrow sp-next" aria-label="Next image">›</button>
+        </div>
+        <div class="sponsor-name">RAJESH LODHI JI</div>
+        <div class="sponsor-business">श्री विनायक हार्डवेयर </div>
       </div>
-      <div class="sponsor-card">
-        <div class="sponsor-logo"><img src="sponsor3.jpg" alt="Sponsor 3" onerror="this.parentElement.classList.add('no-logo')"></div>
+
+      <div class="sponsor-card" data-sponsor-id="3">
+        <div class="sponsor-carousel">
+          <button type="button" class="sp-arrow sp-prev" aria-label="Previous image">‹</button>
+          <img src="sponsor3_1.jpg" alt="Sponsor 3" class="sp-img" data-images="sponsor3_1.jpg,sponsor3_2.jpg,sponsor3_3.jpg" data-index="0" onerror="this.src='';this.parentElement.parentElement.classList.add('no-logo')">
+          <button type="button" class="sp-arrow sp-next" aria-label="Next image">›</button>
+        </div>
         <div class="sponsor-name">Sponsor Name 3</div>
+        <div class="sponsor-business">Business Name 3</div>
       </div>
-      <div class="sponsor-card">
-        <div class="sponsor-logo"><img src="sponsor4.jpg" alt="Sponsor 4" onerror="this.parentElement.classList.add('no-logo')"></div>
+
+      <div class="sponsor-card" data-sponsor-id="4">
+        <div class="sponsor-carousel">
+          <button type="button" class="sp-arrow sp-prev" aria-label="Previous image">‹</button>
+          <img src="sponsor4_1.jpg" alt="Sponsor 4" class="sp-img" data-images="sponsor4_1.jpg,sponsor4_2.jpg,sponsor4_3.jpg" data-index="0" onerror="this.src='';this.parentElement.parentElement.classList.add('no-logo')">
+          <button type="button" class="sp-arrow sp-next" aria-label="Next image">›</button>
+        </div>
         <div class="sponsor-name">Sponsor Name 4</div>
+        <div class="sponsor-business">Business Name 4</div>
       </div>
-      <div class="sponsor-card">
-        <div class="sponsor-logo"><img src="sponsor5.jpg" alt="Sponsor 5" onerror="this.parentElement.classList.add('no-logo')"></div>
-        <div class="sponsor-name">Sponsor Name 5</div>
-      </div>
-      <div class="sponsor-card">
-        <div class="sponsor-logo"><img src="sponsor6.jpg" alt="Sponsor 6" onerror="this.parentElement.classList.add('no-logo')"></div>
-        <div class="sponsor-name">Sponsor Name 6</div>
-      </div>
+
     </div>
   </section>
+
+  <!-- Lightbox for expanded sponsor image -->
+  <div class="lightbox" id="lightbox">
+    <button type="button" class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <button type="button" class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <img src="" alt="" class="lb-img" id="lbImg">
+    <button type="button" class="lb-arrow lb-next" id="lbNext" aria-label="Next">›</button>
+  </div>
   
   
   <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">📸</span><div class="stitch-line"></div></div>
-  
   <!-- ================= PROMO IMAGE ================= -->
 
   <section class="section image-section">
@@ -386,43 +508,78 @@
 
   <div class="stitch-row"><div class="stitch-line"></div><span class="stitch-icon">👤</span><div class="stitch-line"></div></div>
 
-  <!-- ================= ORGANISER ================= -->
+<!-- ================= ORGANISERS ================= -->
   <section class="section" id="organiser">
     <div class="section-head">
       <span class="eyebrow">Contact & Enquiries</span>
-      <h2>Organiser</h2>
+      <h2>Organisers</h2>
     </div>
-    <!-- Photo upload: organiser.jpg — same folder. Edit name/shop/number/address text directly below. -->
-    <div class="organiser-card">
-      <div class="organiser-photo">
-        <img src="organiser.jpg" alt="Organiser photo" onerror="this.parentElement.classList.add('no-photo')">
-      </div>
-      <div class="organiser-info">
-        <div class="organiser-name">Pravanshu Patkar</div>
-        <div class="organiser-shop">जय स्पोर्ट गौरझामर </div>
-        <a href="tel:9589337300" class="organiser-row">
-          <span class="organiser-icon">📞</span> 9589337300
-        </a>
-        <div class="organiser-row">
-          <span class="organiser-icon">📍</span> सड़खेरा रोड , गौरझामर 
+
+    <!-- Photo upload: organiser1.jpg, organiser2.jpg, organiser3.jpg — same folder -->
+    <div class="organisers-grid">
+
+      <div class="organiser-card">
+        <div class="organiser-photo">
+          <img src="organiser1.jpg" alt="Organiser 1" onerror="this.parentElement.classList.add('no-photo')">
         </div>
+        <div class="organiser-info">
+          <div class="organiser-name">जाहर सिंह लोधी (बड़े भाई)</div>
+          <!-- <div class="organiser-shop">Shop / Business Name</div> -->
+          <a href="tel:9575277769" class="organiser-row">
+            <span class="organiser-icon">📞</span> 9575277769
+          </a>
+          <div class="organiser-row">
+            <span class="organiser-icon">📍</span> Gourjhamar
+          </div>
+        </div>
+        <a href="tel:9575277769" class="organiser-call">Call</a>
       </div>
-      <a href="tel:9589337300" class="organiser-call">Call Organiser</a>
+
+      <div class="organiser-card">
+        <div class="organiser-photo">
+          <img src="organiser2.jpg" alt="Organiser 2" onerror="this.parentElement.classList.add('no-photo')">
+        </div>
+        <div class="organiser-info">
+          <div class="organiser-name">सुरेन्द्र सिंह लोधी </div>
+          <!-- <div class="organiser-shop">Shop / Business Name</div> -->
+          <a href="tel:7999836936" class="organiser-row">
+            <span class="organiser-icon">📞</span> 7999836936
+          </a>
+          <div class="organiser-row">
+            <span class="organiser-icon">📍</span>  Gourjhamar
+          </div>
+        </div>
+        <a href="tel:7999836936" class="organiser-call">Call</a>
+      </div>
+
+      <div class="organiser-card organiser-card-center">
+        <div class="organiser-photo">
+          <img src="organiser3.jpg" alt="Organiser 3" onerror="this.parentElement.classList.add('no-photo')">
+        </div>
+        <div class="organiser-info">
+          <div class="organiser-name">प्रभानसू पाटकर </div>
+          <div class="organiser-shop">जय स्पोर्ट गौरझामर </div>
+          <a href="tel:9589337300" class="organiser-row">
+            <span class="organiser-icon">📞</span> 9589337300
+          </a>
+          <div class="organiser-row">
+            <span class="organiser-icon">📍</span>  Gourjhamar
+          </div>
+        </div>
+        <a href="tel:9589337300" class="organiser-call">Call</a>
+      </div>
+
     </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
- <footer class="footer">
+  <footer class="footer">
     <div class="contact">📞 9589337300</div>
     <div class="assoc">Gourjhamar Cricket Association</div>
+    <H3>ALL RIGHTS RESERVED BY :- HONEY SONI </H3>
     <div class="socials">
       <span>📘</span>
       <span>📷</span>
-    </div>
-   <div class="dev-credit">
-      <div class="dev-line">Developed by <b>Honey Soni</b></div>
-      <div class="dev-contact">📞 8817904346</div>
-      <div class="copyright">© 2026 All Rights Reserved</div>
     </div>
   </footer>
 
