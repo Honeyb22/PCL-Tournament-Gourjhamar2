@@ -9,8 +9,8 @@
    PAYEE_NAME  -> name that will show in the UPI app
    AMOUNT      -> registration fee amount (numbers only)
    ============================================================ */
-const UPI_ID     = "9907917286-2@ybl";   // <-- change this
-const PAYEE_NAME = "To PRAVANSHU PATKAR PVT"; // <-- change if needed
+const UPI_ID     = "PUT-YOUR-UPI-ID-HERE@bank";   // <-- change this
+const PAYEE_NAME = "Gourjhamar Cricket Association"; // <-- change if needed
 const AMOUNT     = "500";                          // <-- change if fee changes
 
 /* ============================================================
@@ -160,3 +160,62 @@ function updateCountdown() {
 
 updateCountdown();
 const countdownInterval = setInterval(updateCountdown, 1000);
+
+
+/* ---------------- Sponsor image carousel + lightbox ---------------- */
+document.querySelectorAll(".sponsor-carousel").forEach((carousel) => {
+  const img = carousel.querySelector(".sp-img");
+  const images = img.dataset.images.split(",");
+
+  function setIndex(i) {
+    const idx = ((i % images.length) + images.length) % images.length;
+    img.dataset.index = idx;
+    img.src = images[idx];
+  }
+
+  carousel.querySelector(".sp-prev").addEventListener("click", (e) => {
+    e.stopPropagation();
+    setIndex(parseInt(img.dataset.index) - 1);
+  });
+  carousel.querySelector(".sp-next").addEventListener("click", (e) => {
+    e.stopPropagation();
+    setIndex(parseInt(img.dataset.index) + 1);
+  });
+
+  img.addEventListener("click", () => openLightbox(images, parseInt(img.dataset.index)));
+});
+
+const lightbox = document.getElementById("lightbox");
+const lbImg = document.getElementById("lbImg");
+let lbImages = [];
+let lbIndex = 0;
+
+function openLightbox(images, startIndex) {
+  lbImages = images;
+  lbIndex = startIndex;
+  lbImg.src = lbImages[lbIndex];
+  document.getElementById("lbPrev").style.display = lbImages.length > 1 ? "flex" : "none";
+  document.getElementById("lbNext").style.display = lbImages.length > 1 ? "flex" : "none";
+  lightbox.classList.add("open");
+}
+function closeLightbox() {
+  lightbox.classList.remove("open");
+}
+function lbShow(delta) {
+  lbIndex = ((lbIndex + delta) % lbImages.length + lbImages.length) % lbImages.length;
+  lbImg.src = lbImages[lbIndex];
+}
+
+document.getElementById("lbClose").addEventListener("click", closeLightbox);
+document.getElementById("lbPrev").addEventListener("click", () => lbShow(-1));
+document.getElementById("lbNext").addEventListener("click", () => lbShow(1));
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+
+/* ---------------- Owner photo click -> expand in lightbox ---------------- */
+document.querySelectorAll(".owner-img").forEach((img) => {
+  img.style.cursor = "pointer";
+  img.addEventListener("click", () => openLightbox([img.src], 0));
+});
