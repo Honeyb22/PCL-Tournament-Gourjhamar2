@@ -1064,3 +1064,99 @@ a.organiser-row{ color:var(--cream); }
   padding:6px 18px;
   border-radius:999px;
 }
+
+
+/* ================= PRESENTS BLOCK ================= */
+.presents-block{
+  text-align:center;
+  margin-bottom:6px;
+}
+.presents-brand{
+  font-family:var(--font-display);
+  font-weight:400;
+  font-size:1.7rem;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  background:linear-gradient(180deg, var(--cream) 0%, var(--floodlight) 70%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  line-height:1.1;
+}
+.presents-brand span{
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:.6em;
+  color:var(--floodlight-2);
+  -webkit-text-fill-color:var(--floodlight-2);
+  letter-spacing:.02em;
+}
+.presents-name{
+  font-family:var(--font-score);
+  font-weight:500;
+  font-size:.95rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--cream-dim);
+  margin-top:4px;
+}
+.presents-tag{
+  margin-top:6px;
+  font-family:var(--font-score);
+  font-size:.7rem;
+  font-weight:600;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--floodlight-2);
+  position:relative;
+  display:inline-block;
+  padding:0 16px;
+}
+.presents-tag::before,
+.presents-tag::after{
+  content:"";
+  position:absolute;
+  top:50%;
+  width:10px;
+  height:1px;
+  background:var(--floodlight-2);
+  opacity:.6;
+}
+.presents-tag::before{ left:-4px; }
+.presents-tag::after{ right:-4px; }
+
+/* ================= LR BRAND IMAGE + INSTAGRAM ================= */
+.lr-brand-block{
+  margin-top:20px;
+  text-align:center;
+}
+.lr-brand-image{
+  width:100%;
+  max-width:280px;
+  margin:0 auto;
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow-deep);
+  border:1px solid rgba(255,201,60,.18);
+}
+.lr-brand-image img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.lr-insta-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin-top:12px;
+  font-family:var(--font-score);
+  font-weight:600;
+  font-size:.82rem;
+  letter-spacing:.02em;
+  color:var(--night);
+  background:linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  padding:9px 18px;
+  border-radius:999px;
+  text-decoration:none;
+  box-shadow:0 8px 20px rgba(221,42,123,.3);
+}
