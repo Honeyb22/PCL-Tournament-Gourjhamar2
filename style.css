@@ -1153,10 +1153,10 @@ a.organiser-row{ color:var(--cream); }
   font-weight:600;
   font-size:.82rem;
   letter-spacing:.02em;
-  color:var(--night);
-  background:linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  color:var(--cream);
+  background:transparent;
   padding:9px 18px;
+  border:1px solid rgba(255,201,60,.4);
   border-radius:999px;
   text-decoration:none;
-  box-shadow:0 8px 20px rgba(221,42,123,.3);
 }
