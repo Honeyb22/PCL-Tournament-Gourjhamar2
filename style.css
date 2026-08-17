@@ -274,6 +274,9 @@ img{ max-width:100%; display:block; }
   scroll-snap-type:x mandatory;
   padding:6px 6px 14px;
   -webkit-overflow-scrolling:touch;
+  justify-content:flex-start;
+}
+.qr-scroll:has(.qr-card:only-child){
   justify-content:center;
 }
 .qr-scroll::-webkit-scrollbar{ height:6px; }
