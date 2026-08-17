@@ -198,12 +198,10 @@
           <div class="qr-label">Scan & Pay — UPI</div>
         </div>
 
-        <!-- SECOND QR CARD START (delete this line and the END line below to enable)
         <div class="qr-card">
           <img src="qr2.jpg" alt="Scan to pay via UPI - alternate">
           <div class="qr-label">Alternate QR</div>
         </div>
-        SECOND QR CARD END -->
       </div>
       <div class="qr-hint">Scan the QR above, or tap the button below to pay directly</div>
 
@@ -215,6 +213,26 @@
       -->
       <a href="#" id="payNowBtn" class="pay-btn">💰 Pay ₹500 Now</a>
       <div class="upi-note">Tapping this opens your UPI app (GPay / PhonePe / Paytm) with amount pre-filled.</div>
+    </div>
+
+    <div class="upi-fallback">
+        <div class="upi-fallback-msg">
+          ⚠️ अगर "Pay ₹500 Now" बटन पर क्लिक करने से पेमेंट में समस्या आ रही है, तो नीचे दी गई UPI ID या UPI नंबर को कॉपी करके अपने UPI ऐप में पेस्ट करें और भुगतान करें।
+        </div>
+
+        <div class="upi-copy-row">
+          <span class="upi-copy-label">UPI ID</span>
+          <span class="upi-copy-value" id="upiIdValue">prabhansupatkar@ybl</span>
+          <button type="button" class="upi-copy-btn" data-copy-target="upiIdValue">Copy</button>
+        </div>
+
+        <div class="upi-copy-row">
+          <span class="upi-copy-label">UPI नंबर</span>
+          <span class="upi-copy-value" id="upiNumberValue">9589337300</span>
+          <button type="button" class="upi-copy-btn" data-copy-target="upiNumberValue">Copy</button>
+        </div>
+
+        <div class="upi-copy-toast" id="upiCopyToast">✅ Copied!</div>
     </div>
   </section>
 
