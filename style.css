@@ -1160,3 +1160,54 @@ a.organiser-row{ color:var(--cream); }
   border-radius:999px;
   text-decoration:none;
 }
+
+
+/* ================= HELP / SUPPORT CARD ================= */
+.help-support-card{
+  background:linear-gradient(165deg, var(--night-2), var(--night-3));
+  border:1px solid rgba(192,57,43,.35);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-deep);
+  padding:26px 20px;
+  text-align:center;
+}
+.help-support-icon{ font-size:2rem; margin-bottom:8px; }
+.help-support-title{
+  font-family:var(--font-score);
+  font-weight:700;
+  font-size:1.15rem;
+  color:var(--cream);
+}
+.help-support-text{
+  font-size:.85rem;
+  color:var(--cream-dim);
+  margin-top:8px;
+  line-height:1.5;
+}
+.help-support-call{
+  display:block;
+  margin-top:16px;
+  padding:14px;
+  font-family:var(--font-score);
+  font-weight:700;
+  font-size:1rem;
+  letter-spacing:.02em;
+  color:var(--cream);
+  background:linear-gradient(135deg, var(--ball), var(--ball-2));
+  border-radius:12px;
+  text-decoration:none;
+  box-shadow:0 10px 24px rgba(192,57,43,.3);
+}
+.help-support-whatsapp{
+  display:block;
+  margin-top:10px;
+  padding:12px;
+  font-family:var(--font-score);
+  font-weight:600;
+  font-size:.9rem;
+  color:var(--pitch);
+  background:transparent;
+  border:1px solid var(--pitch);
+  border-radius:12px;
+  text-decoration:none;
+}
