@@ -1241,6 +1241,20 @@ a.organiser-row{ color:var(--cream); }
   padding:10px 12px;
   margin-bottom:10px;
 }
+
+.upi-holder-name{
+  font-family:var(--font-score);
+  font-weight:600;
+  font-size:.8rem;
+  letter-spacing:.03em;
+  color:var(--floodlight);
+  margin:12px 0 6px;
+}
+.upi-holder-name:first-of-type{
+  margin-top:0;
+}
+
+
 .upi-copy-row:last-of-type{ margin-bottom:0; }
 .upi-copy-label{
   font-family:var(--font-score);
