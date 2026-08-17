@@ -219,3 +219,30 @@ document.querySelectorAll(".owner-img").forEach((img) => {
   img.style.cursor = "pointer";
   img.addEventListener("click", () => openLightbox([img.src], 0));
 });
+
+
+
+/* ---------------- UPI copy buttons ---------------- */
+document.querySelectorAll(".upi-copy-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const targetId = btn.dataset.copyTarget;
+    const text = document.getElementById(targetId).textContent.trim();
+
+    navigator.clipboard.writeText(text).then(() => {
+      const toast = document.getElementById("upiCopyToast");
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 1800);
+    }).catch(() => {
+      // fallback for older browsers
+      const temp = document.createElement("textarea");
+      temp.value = text;
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand("copy");
+      document.body.removeChild(temp);
+      const toast = document.getElementById("upiCopyToast");
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 1800);
+    });
+  });
+});
