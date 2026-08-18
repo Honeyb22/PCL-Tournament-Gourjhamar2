@@ -246,3 +246,31 @@ document.querySelectorAll(".upi-copy-btn").forEach((btn) => {
     });
   });
 });
+
+
+/* ---------------- Intro audio: try autoplay, fallback to tap ---------------- */
+const introAudio = document.getElementById("introAudio");
+const soundBtn = document.getElementById("soundBtn");
+
+function tryAutoplay() {
+  introAudio.play().catch(() => {
+    // Autoplay blocked — show the tap button
+    soundBtn.classList.add("show");
+  });
+}
+
+window.addEventListener("load", tryAutoplay);
+
+soundBtn.addEventListener("click", () => {
+  introAudio.play();
+  soundBtn.classList.remove("show");
+});
+
+// If autoplay was blocked, play on the very first tap anywhere on the page
+document.addEventListener("click", function firstTapPlay() {
+  if (introAudio.paused) {
+    introAudio.play().catch(() => {});
+  }
+  soundBtn.classList.remove("show");
+  document.removeEventListener("click", firstTapPlay);
+}, { once: true });
