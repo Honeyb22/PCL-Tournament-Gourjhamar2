@@ -347,6 +347,43 @@
         <button type="submit" class="submit-btn" id="submitBtn">Submit Registration</button>
         <div class="form-status" id="formStatus"></div>
       </form>
+
+          <!-- ================= LOADING / SUCCESS OVERLAY ================= -->
+    <div class="reg-overlay" id="regOverlay">
+
+      <div class="overlay-panel" id="waitPanel">
+        <div class="wait-title">WAIT</div>
+        <div class="cricket-loader">
+          <div class="ball">🏏</div>
+        </div>
+        <div class="wait-sub">आपका फॉर्म सर्वर पर भेजा जा रहा है...</div>
+        <div class="trivia-box">
+          <div class="trivia-label">🤔 इस सवाल का जवाब सोचिए:</div>
+          <div class="trivia-question" id="triviaQuestion"></div>
+        </div>
+      </div>
+
+      <div class="overlay-panel" id="successPanel">
+        <div class="tick-circle">
+          <svg viewBox="0 0 52 52" class="tick-svg">
+            <circle class="tick-circle-bg" cx="26" cy="26" r="23" fill="none"/>
+            <path class="tick-check" fill="none" d="M14 27l7 7 16-16"/>
+          </svg>
+        </div>
+        <div class="success-title">रजिस्ट्रेशन सफल!</div>
+        <div class="success-sub">आपकी जानकारी सफलतापूर्वक सबमिट हो गई है।</div>
+        <div class="trivia-box trivia-answer-box">
+          <div class="trivia-label">✅ सही जवाब:</div>
+          <div class="trivia-answer" id="triviaAnswer"></div>
+        </div>
+        <div class="help-box">
+          किसी भी समस्या, फॉर्म फेल होने या पूछताछ के लिए संपर्क करें:<br>
+          <a href="tel:8817904346" class="help-number">📞 8817904346</a>
+        </div>
+        <button type="button" class="overlay-close-btn" id="overlayCloseBtn">Done</button>
+      </div>
+
+    
     </div>
   </section>
 

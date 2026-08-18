@@ -68,6 +68,53 @@ const form = document.getElementById("regForm");
 const submitBtn = document.getElementById("submitBtn");
 const statusEl = document.getElementById("formStatus");
 
+/* ---------------- Overlay + trivia setup ---------------- */
+const regOverlay = document.getElementById("regOverlay");
+const waitPanel = document.getElementById("waitPanel");
+const successPanel = document.getElementById("successPanel");
+const overlayCloseBtn = document.getElementById("overlayCloseBtn");
+
+overlayCloseBtn.addEventListener("click", () => {
+  regOverlay.classList.remove("open");
+});
+
+const triviaList = [
+  { q: "एक ओवर में कितनी गेंदें होती हैं?", a: "6 गेंदें" },
+  { q: "पहला क्रिकेट वर्ल्ड कप किस साल खेला गया था?", a: "1975 में" },
+  { q: "क्रिकेट पिच की लंबाई कितनी होती है?", a: "22 गज" },
+  { q: "T20 क्रिकेट में कुल कितने ओवर होते हैं?", a: "20 ओवर (हर टीम के लिए)" },
+  { q: "किस खिलाड़ी के नाम अंतरराष्ट्रीय क्रिकेट में सबसे ज़्यादा शतक हैं?", a: "सचिन तेंदुलकर" },
+  { q: "LBW का पूरा नाम क्या है?", a: "Leg Before Wicket" }
+];
+let currentTrivia = null;
+
+function pickRandomTrivia() {
+  currentTrivia = triviaList[Math.floor(Math.random() * triviaList.length)];
+  document.getElementById("triviaQuestion").textContent = currentTrivia.q;
+}
+function revealTriviaAnswer() {
+  if (currentTrivia) {
+    document.getElementById("triviaAnswer").textContent = currentTrivia.a;
+  }
+}
+
+function playSuccessSound() {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.type = "sine";
+    osc.frequency.setValueAtTime(880, ctx.currentTime);
+    osc.frequency.setValueAtTime(1200, ctx.currentTime + 0.12);
+    gain.gain.setValueAtTime(0.2, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+    osc.start();
+    osc.stop(ctx.currentTime + 0.4);
+  } catch (err) {}
+}
+
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
@@ -78,8 +125,12 @@ form.addEventListener("submit", async function (e) {
   }
 
   submitBtn.disabled = true;
-  statusEl.className = "form-status pending";
-  statusEl.textContent = "Submitting... please wait";
+  statusEl.textContent = "";
+
+  waitPanel.classList.add("active");
+  successPanel.classList.remove("active");
+  regOverlay.classList.add("open");
+  pickRandomTrivia();
 
   try {
     const playerPhotoFile = document.getElementById("playerPhoto").files[0];
@@ -99,7 +150,6 @@ form.addEventListener("submit", async function (e) {
       screenshotType: screenshotFile.type,
     };
 
-    // text/plain avoids a CORS pre-flight request that Apps Script cannot answer
     const res = await fetch(SCRIPT_URL, {
       method: "POST",
       headers: { "Content-Type": "text/plain;charset=utf-8" },
@@ -109,8 +159,10 @@ form.addEventListener("submit", async function (e) {
     const result = await res.json();
 
     if (result.status === "success") {
-      statusEl.className = "form-status ok";
-      statusEl.textContent = "✅ Registration submitted! You'll be contacted soon.";
+      waitPanel.classList.remove("active");
+      successPanel.classList.add("active");
+      revealTriviaAnswer();
+      playSuccessSound();
       form.reset();
       document.getElementById("playerPhotoName").textContent = "";
       document.getElementById("screenshotName").textContent = "";
@@ -118,8 +170,9 @@ form.addEventListener("submit", async function (e) {
       throw new Error(result.message || "Unknown error");
     }
   } catch (err) {
+    regOverlay.classList.remove("open");
     statusEl.className = "form-status err";
-    statusEl.textContent = "❌ Submission failed. Please try again.";
+    statusEl.textContent = "❌ Submission failed. Please try again or contact 8817904346.";
     console.error(err);
   } finally {
     submitBtn.disabled = false;
