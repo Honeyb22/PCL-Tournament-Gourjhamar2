@@ -1295,3 +1295,25 @@ a.organiser-row{ color:var(--cream); }
   color:var(--pitch);
 }
 .upi-copy-toast.show{ display:block; }
+
+
+
+/* ================= INTRO SOUND BUTTON ================= */
+.sound-btn{
+  display:none;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  z-index:250;
+  font-family:var(--font-score);
+  font-weight:600;
+  font-size:.8rem;
+  color:var(--night);
+  background:var(--floodlight);
+  border:none;
+  padding:10px 16px;
+  border-radius:999px;
+  box-shadow:0 8px 20px rgba(255,201,60,.4);
+  cursor:pointer;
+}
+.sound-btn.show{ display:block; }
