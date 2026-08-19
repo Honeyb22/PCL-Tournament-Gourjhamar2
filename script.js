@@ -330,7 +330,7 @@ document.addEventListener("click", function firstTapPlay() {
 
 
 
-/* ---------------- Important info popup on page load ---------------- */
+/* ---------------- Important info popup on page loadS ---------------- */
 const infoModalOverlay = document.getElementById("infoModalOverlay");
 const infoModalClose = document.getElementById("infoModalClose");
 const infoModalOk = document.getElementById("infoModalOk");
