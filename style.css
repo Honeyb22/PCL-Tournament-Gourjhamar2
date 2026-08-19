@@ -1385,11 +1385,13 @@ a.organiser-row{ color:var(--cream); }
   text-transform:uppercase;
   color:var(--floodlight);
   margin-bottom:6px;
+  text-align:center;
 }
 .trivia-question, .trivia-answer{
   font-size:.9rem;
   color:var(--cream);
   line-height:1.5;
+  text-align:center;
 }
 .trivia-answer-box{
   border-color:rgba(46,139,79,.35);
@@ -1548,3 +1550,61 @@ a.organiser-row{ color:var(--cream); }
   border-radius:12px;
   cursor:pointer;
 }
+
+
+/* ================= REGISTER NOW BUTTON AT TOP ================= */
+.register-now-btn{
+  display:block;
+  width:fit-content;
+  margin:20px auto 0;
+  padding:16px 36px;
+  font-family:var(--font-score);
+  font-weight:800;
+  font-size:1.1rem;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:#fff;
+  background:linear-gradient(135deg, var(--pitch), var(--pitch-2));
+  border:2px solid rgba(255,255,255,.2);
+  border-radius:999px;
+  text-decoration:none;
+  box-shadow:0 12px 30px rgba(46,139,79,.45);
+  animation:registerPulse 1.8s ease-in-out infinite;
+}
+@keyframes registerPulse{
+  0%,100%{ transform:scale(1); box-shadow:0 12px 30px rgba(46,139,79,.45); }
+  50%{ transform:scale(1.05); box-shadow:0 16px 40px rgba(46,139,79,.65); }
+}
+@media (prefers-reduced-motion: reduce){
+  .register-now-btn{ animation:none; }
+}
+
+/* ================= GIFT NOTE NEAR REGISTRATION  ================= */
+
+.gift-note{
+  text-align:center;
+  font-family:var(--font-score);
+  font-weight:600;
+  font-size:.88rem;
+  color:var(--floodlight);
+  background:rgba(255,201,60,.1);
+  border:1px solid rgba(255,201,60,.3);
+  border-radius:10px;
+  padding:12px 16px;
+  margin-bottom:16px;
+  line-height:1.5;
+}
+/* ================= PLAYER NAME OF SUCCESS SCREEN  ================= */
+
+.success-player-name{
+  font-family:var(--font-display);
+  font-weight:400;
+  font-size:1.7rem;
+  letter-spacing:.02em;
+  background:linear-gradient(180deg, var(--cream) 0%, var(--floodlight) 70%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-bottom:4px;
+}
+

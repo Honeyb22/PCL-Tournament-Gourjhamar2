@@ -161,6 +161,7 @@ form.addEventListener("submit", async function (e) {
     if (result.status === "success") {
       waitPanel.classList.remove("active");
       successPanel.classList.add("active");
+      document.getElementById("successPlayerName").textContent = "🏏 " + payload.playerName;
       revealTriviaAnswer();
       playSuccessSound();
       form.reset();
