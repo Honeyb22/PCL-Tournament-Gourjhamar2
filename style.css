@@ -1469,7 +1469,7 @@ a.organiser-row{ color:var(--cream); }
 
 
 /* ================= INFO MODAL POPUP ================= */
-.info-modal-overlay{
+/* .info-modal-overlay{
   display:none;
   position:fixed;
   inset:0;
@@ -1547,4 +1547,4 @@ a.organiser-row{ color:var(--cream); }
   border:none;
   border-radius:12px;
   cursor:pointer;
-}
+} */

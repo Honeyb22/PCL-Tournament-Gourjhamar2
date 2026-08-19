@@ -331,20 +331,20 @@ document.addEventListener("click", function firstTapPlay() {
 
 
 /* ---------------- Important info popup on page loadS ---------------- */
-const infoModalOverlay = document.getElementById("infoModalOverlay");
-const infoModalClose = document.getElementById("infoModalClose");
-const infoModalOk = document.getElementById("infoModalOk");
+// const infoModalOverlay = document.getElementById("infoModalOverlay");
+// const infoModalClose = document.getElementById("infoModalClose");
+// const infoModalOk = document.getElementById("infoModalOk");
 
-window.addEventListener("load", () => {
-  infoModalOverlay.classList.add("open");
-});
+// window.addEventListener("load", () => {
+//   infoModalOverlay.classList.add("open");
+// });
 
-infoModalClose.addEventListener("click", () => {
-  infoModalOverlay.classList.remove("open");
-});
-infoModalOk.addEventListener("click", () => {
-  infoModalOverlay.classList.remove("open");
-});
-infoModalOverlay.addEventListener("click", (e) => {
-  if (e.target === infoModalOverlay) infoModalOverlay.classList.remove("open");
-});
+// infoModalClose.addEventListener("click", () => {
+//   infoModalOverlay.classList.remove("open");
+// });
+// infoModalOk.addEventListener("click", () => {
+//   infoModalOverlay.classList.remove("open");
+// });
+// infoModalOverlay.addEventListener("click", (e) => {
+//   if (e.target === infoModalOverlay) infoModalOverlay.classList.remove("open");
+// });
