@@ -327,3 +327,24 @@ document.addEventListener("click", function firstTapPlay() {
   soundBtn.classList.remove("show");
   document.removeEventListener("click", firstTapPlay);
 }, { once: true });
+
+
+
+/* ---------------- Important info popup on page load ---------------- */
+const infoModalOverlay = document.getElementById("infoModalOverlay");
+const infoModalClose = document.getElementById("infoModalClose");
+const infoModalOk = document.getElementById("infoModalOk");
+
+window.addEventListener("load", () => {
+  infoModalOverlay.classList.add("open");
+});
+
+infoModalClose.addEventListener("click", () => {
+  infoModalOverlay.classList.remove("open");
+});
+infoModalOk.addEventListener("click", () => {
+  infoModalOverlay.classList.remove("open");
+});
+infoModalOverlay.addEventListener("click", (e) => {
+  if (e.target === infoModalOverlay) infoModalOverlay.classList.remove("open");
+});
