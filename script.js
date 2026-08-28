@@ -349,3 +349,36 @@ infoModalOk.addEventListener("click", () => {
 infoModalOverlay.addEventListener("click", (e) => {
   if (e.target === infoModalOverlay) infoModalOverlay.classList.remove("open");
 });
+
+
+
+/* ---------------- Live registration notification (rotates every 1 min) ---------------- */
+const registeredNamesList = [
+  "सचिन जैन बजाज",
+  "Govind singh Lodhi",
+  "Syam Thakur",
+  "Arpit Yadav",
+  "Girdhari Kurmi"
+  // yahan aur naam add karte jao, comma laga ke
+];
+
+const regNotify = document.getElementById("regNotify");
+const regNotifyName = document.getElementById("regNotifyName");
+let notifyIndex = 0;
+
+function showRegNotification() {
+  if (registeredNamesList.length === 0) return;
+  regNotifyName.textContent = registeredNamesList[notifyIndex % registeredNamesList.length];
+  notifyIndex++;
+  regNotify.classList.add("show");
+
+  setTimeout(() => {
+    regNotify.classList.remove("show");
+  }, 5000); // notification 5 second tak dikhega
+}
+
+// Pehla notification 8 second baad, phir har 60 second mein
+setTimeout(() => {
+  showRegNotification();
+  setInterval(showRegNotification, 60000);
+}, 8000);

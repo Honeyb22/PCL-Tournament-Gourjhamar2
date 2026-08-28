@@ -1608,3 +1608,44 @@ a.organiser-row{ color:var(--cream); }
   margin-bottom:4px;
 }
 
+
+
+/* ================= LIVE REGISTRATION NOTIFICATION ================= */
+.reg-notify{
+  position:fixed;
+  bottom:20px;
+  left:16px;
+  right:16px;
+  max-width:340px;
+  margin:0 auto;
+  z-index:220;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:var(--night-2);
+  border:1px solid rgba(46,139,79,.4);
+  border-radius:12px;
+  padding:12px 14px;
+  box-shadow:0 12px 30px rgba(0,0,0,.4);
+  transform:translateY(120%);
+  opacity:0;
+  transition:transform .4s ease, opacity .4s ease;
+  pointer-events:none;
+}
+.reg-notify.show{
+  transform:translateY(0);
+  opacity:1;
+}
+.reg-notify-icon{
+  font-size:1.3rem;
+  flex-shrink:0;
+}
+.reg-notify-text{
+  font-size:.82rem;
+  color:var(--cream);
+  line-height:1.4;
+}
+.reg-notify-text span{
+  font-weight:700;
+  color:var(--floodlight);
+}
