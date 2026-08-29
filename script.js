@@ -374,11 +374,11 @@ function showRegNotification() {
 
   setTimeout(() => {
     regNotify.classList.remove("show");
-  }, 5000); // notification 5 second tak dikhega
+  }, 8000); // notification 5 second tak dikhega
 }
 
 // Pehla notification 8 second baad, phir har 60 second mein
 setTimeout(() => {
   showRegNotification();
-  setInterval(showRegNotification, 60000);
+  setInterval(showRegNotification, 6000);
 }, 8000);
