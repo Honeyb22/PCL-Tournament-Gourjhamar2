@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PCL 2026 | Teams & Players</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        /* =========================================================
+       PCL TEAMS & SQUADS
+       ========================================================= */
+
+        :root {
+
+            --night: #050912;
+            --night-2: #091326;
+            --night-3: #101d36;
+
+            --floodlight: #ffc93c;
+            --floodlight-2: #ffa630;
+
+            --cream: #f5efe0;
+            --cream-dim: #bdb9aa;
+
+            --white: #ffffff;
+
+            --border: rgba(255, 255, 255, 0.10);
+
+            --radius: 18px;
+
+        }
+
+
+        /* =========================================================
+       RESET
+       ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            background:
+
+                radial-gradient(circle at 15% 0%,
+                    rgba(255, 201, 60, 0.08),
+                    transparent 30%),
+
+                radial-gradient(circle at 85% 10%,
+                    rgba(46, 139, 79, 0.10),
+                    transparent 30%),
+
+                linear-gradient(180deg,
+                    var(--night),
+                    #03060d);
+
+            color: var(--cream);
+
+            font-family: "Work Sans", sans-serif;
+
+            overflow-x: hidden;
+
+        }
+
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            background:
+
+                radial-gradient(circle at 10% 5%,
+                    rgba(255, 201, 60, 0.08),
+                    transparent 18%),
+
+                radial-gradient(circle at 90% 5%,
+                    rgba(255, 201, 60, 0.06),
+                    transparent 18%);
+
+            z-index: -1;
+
+        }
+
+
+        /* =========================================================
+       PAGE
+       ========================================================= */
+
+        .page {
+
+            width: min(1400px, 94%);
+
+            margin: 0 auto;
+
+        }
+
+
+        /* =========================================================
+       HEADER
+       ========================================================= */
+
+        .header {
+
+            text-align: center;
+
+            padding: 60px 15px 30px;
+
+        }
+
+
+        .header-kicker {
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            letter-spacing: 4px;
+
+            color: var(--floodlight);
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .header-title {
+
+            font-family: "Anton", sans-serif;
+
+            font-size: clamp(42px, 7vw, 82px);
+
+            line-height: 0.95;
+
+            letter-spacing: 1px;
+
+            color: var(--cream);
+
+        }
+
+
+        .header-title span {
+
+            color: var(--floodlight);
+
+        }
+
+
+        .header-subtitle {
+
+            margin-top: 18px;
+
+            color: var(--cream-dim);
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: clamp(15px, 2vw, 19px);
+
+            letter-spacing: 1px;
+
+        }
+
+
+        /* =========================================================
+       BACK BUTTON
+       ========================================================= */
+
+        .back-area {
+
+            display: flex;
+
+            justify-content: center;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .back-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 11px 18px;
+
+            border: 1px solid rgba(255, 201, 60, 0.30);
+
+            border-radius: 999px;
+
+            color: var(--cream);
+
+            background: rgba(255, 255, 255, 0.04);
+
+            text-decoration: none;
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .back-btn:hover {
+
+            background: rgba(255, 201, 60, 0.10);
+
+            border-color: rgba(255, 201, 60, 0.55);
+
+            transform: translateY(-2px);
+
+        }
+
+
+        /* =========================================================
+       STATISTICS
+       ========================================================= */
+
+        .stats {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 14px;
+
+            margin: 0 auto 35px;
+
+            max-width: 850px;
+
+        }
+
+
+        .stat-card {
+
+            position: relative;
+
+            padding: 22px 15px;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius);
+
+            background:
+
+                linear-gradient(145deg,
+                    rgba(255, 255, 255, 0.06),
+                    rgba(255, 255, 255, 0.015));
+
+            box-shadow:
+
+                0 20px 60px rgba(0, 0, 0, 0.40);
+
+            text-align: center;
+
+            overflow: hidden;
+
+        }
+
+
+        .stat-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: 15%;
+
+            right: 15%;
+
+            height: 2px;
+
+            background: var(--floodlight);
+
+            opacity: 0.7;
+
+        }
+
+
+        .stat-number {
+
+            display: block;
+
+            font-family: "Anton", sans-serif;
+
+            font-size: 35px;
+
+            color: var(--floodlight);
+
+            line-height: 1;
+
+        }
+
+
+        .stat-label {
+
+            display: block;
+
+            margin-top: 7px;
+
+            color: var(--cream-dim);
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        /* =========================================================
+       SEARCH
+       ========================================================= */
+
+        .controls {
+
+            max-width: 1050px;
+
+            margin: 0 auto 35px;
+
+        }
+
+
+        .search-box {
+
+            position: relative;
+
+        }
+
+
+        .search-icon {
+
+            position: absolute;
+
+            left: 18px;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            font-size: 18px;
+
+            opacity: 0.8;
+
+            pointer-events: none;
+
+        }
+
+
+        #searchInput {
+
+            width: 100%;
+
+            height: 58px;
+
+            padding: 0 20px 0 52px;
+
+            border-radius: 14px;
+
+            border: 1px solid rgba(255, 255, 255, 0.12);
+
+            outline: none;
+
+            background: rgba(255, 255, 255, 0.045);
+
+            color: var(--cream);
+
+            font-family: "Work Sans", sans-serif;
+
+            font-size: 16px;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        #searchInput::placeholder {
+
+            color: #777d89;
+
+        }
+
+
+        #searchInput:focus {
+
+            border-color: rgba(255, 201, 60, 0.55);
+
+            background: rgba(255, 255, 255, 0.065);
+
+            box-shadow:
+
+                0 0 0 3px rgba(255, 201, 60, 0.06);
+
+        }
+
+
+        /* =========================================================
+       TEAM GRID
+       ========================================================= */
+
+        .teams-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            gap: 22px;
+
+            padding-bottom: 60px;
+
+        }
+
+
+        /* =========================================================
+       TEAM CARD
+       ========================================================= */
+
+        .team-card {
+
+            --team: #2563eb;
+
+            position: relative;
+
+            border: 1px solid rgba(255, 255, 255, 0.09);
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(145deg,
+                    rgba(255, 255, 255, 0.055),
+                    rgba(255, 255, 255, 0.018));
+
+            box-shadow:
+
+                0 18px 45px rgba(0, 0, 0, 0.32);
+
+            opacity: 0;
+
+            transform: translateY(15px);
+
+            animation: teamAppear 0.5s ease forwards;
+
+            transition:
+
+                transform 0.25s ease,
+
+                border-color 0.25s ease,
+
+                box-shadow 0.25s ease;
+
+        }
+
+
+        .team-card:hover {
+
+            transform: translateY(-4px);
+
+            border-color: var(--team);
+
+            box-shadow:
+
+                0 24px 60px rgba(0, 0, 0, 0.40);
+
+        }
+
+
+        @keyframes teamAppear {
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+        /* =========================================================
+       TEAM COLOR STRIP
+       ========================================================= */
+
+        .team-strip {
+
+            height: 5px;
+
+            background: var(--team);
+
+            box-shadow:
+
+                0 0 20px var(--team);
+
+        }
+
+
+        /* =========================================================
+       TEAM HEADER
+       ========================================================= */
+
+        .team-header {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            padding: 20px;
+
+        }
+
+
+        /* =========================================================
+       TEAM SHORT NAME "LOGO"
+       ========================================================= */
+
+        .team-logo {
+
+            flex: 0 0 68px;
+
+            width: 68px;
+
+            height: 58px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 6px;
+
+            border-radius: 12px;
+
+            background:
+
+                rgba(255, 255, 255, 0.035);
+
+            border:
+
+                1px solid var(--team);
+
+            color: var(--team);
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 0.5px;
+
+            text-align: center;
+
+            line-height: 1.1;
+
+            overflow: hidden;
+
+            word-break: break-word;
+
+        }
+
+
+        /* =========================================================
+       TEAM META
+       ========================================================= */
+
+        .team-meta {
+
+            min-width: 0;
+
+            flex: 1;
+
+        }
+
+
+        .team-number {
+
+            display: block;
+
+            color: var(--team);
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        /* =========================================================
+       TEAM NAME
+       Changed from Anton to Oswald for readability
+       ========================================================= */
+
+        .team-name {
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: clamp(24px, 3vw, 32px);
+
+            font-weight: 700;
+
+            line-height: 1.05;
+
+            letter-spacing: 0.4px;
+
+            color: var(--cream);
+
+            white-space: normal;
+
+            overflow-wrap: anywhere;
+
+        }
+
+
+        .team-owner {
+
+            margin-top: 7px;
+
+            color: var(--cream-dim);
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: 13px;
+
+        }
+
+
+        .team-owner strong {
+
+            color: var(--cream);
+
+        }
+
+
+        /* =========================================================
+       SQUAD BUTTON
+       ========================================================= */
+
+        .squad-toggle {
+
+            width: calc(100% - 40px);
+
+            margin: 0 20px 20px;
+
+            padding: 13px 15px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            border:
+
+                1px solid var(--team);
+
+            border-radius: 12px;
+
+            background:
+
+                rgba(255, 255, 255, 0.025);
+
+            color: var(--cream);
+
+            cursor: pointer;
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .squad-toggle:hover {
+
+            background:
+
+                rgba(255, 255, 255, 0.06);
+
+        }
+
+
+        .toggle-left {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+        }
+
+
+        .toggle-count {
+
+            color: var(--cream-dim);
+
+            font-size: 11px;
+
+        }
+
+
+        .arrow {
+
+            font-size: 15px;
+
+            transition:
+
+                transform 0.3s ease;
+
+        }
+
+
+        .team-card.open .arrow {
+
+            transform: rotate(180deg);
+
+        }
+
+
+        /* =========================================================
+       SQUAD PANEL
+       ========================================================= */
+
+        .squad-panel {
+
+            display: grid;
+
+            grid-template-rows: 0fr;
+
+            transition:
+
+                grid-template-rows 0.35s ease;
+
+        }
+
+
+        .team-card.open .squad-panel {
+
+            grid-template-rows: 1fr;
+
+        }
+
+
+        .squad-inner {
+
+            min-height: 0;
+
+            overflow: hidden;
+
+        }
+
+
+        .players {
+
+            padding: 0 20px 20px;
+
+        }
+
+
+        /* =========================================================
+       PLAYER ROW
+       ========================================================= */
+
+        .player-row {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            padding: 11px 12px;
+
+            margin-top: 7px;
+
+            border-radius: 11px;
+
+            border:
+
+                1px solid rgba(255, 255, 255, 0.055);
+
+            background:
+
+                rgba(255, 255, 255, 0.025);
+
+            transition:
+
+                background 0.2s ease,
+
+                border-color 0.2s ease;
+
+        }
+
+
+        .player-row:hover {
+
+            background:
+
+                rgba(255, 255, 255, 0.045);
+
+            border-color:
+
+                var(--team);
+
+        }
+
+
+        /* =========================================================
+       PLAYER NUMBER
+       ========================================================= */
+
+        .player-number {
+
+            width: 28px;
+
+            flex: 0 0 28px;
+
+            text-align: center;
+
+            color: #69717f;
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+        }
+
+
+        /* =========================================================
+       PLAYER INITIALS
+       ========================================================= */
+
+        .player-avatar {
+
+            width: 38px;
+
+            height: 38px;
+
+            flex: 0 0 38px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            background:
+
+                rgba(255, 255, 255, 0.04);
+
+            border:
+
+                1px solid var(--team);
+
+            color: var(--cream);
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+        }
+
+
+        /* =========================================================
+       PLAYER NAME
+       ========================================================= */
+
+        .player-name {
+
+            flex: 1;
+
+            min-width: 0;
+
+            color: var(--cream);
+
+            font-family: "Work Sans", sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            white-space: nowrap;
+
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+
+        }
+
+
+        /* =========================================================
+       NO RESULTS
+       ========================================================= */
+
+        .no-results {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 70px 20px;
+
+            color: var(--cream-dim);
+
+        }
+
+
+        .no-results.show {
+
+            display: block;
+
+        }
+
+
+        .no-results-icon {
+
+            font-size: 42px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .no-results h3 {
+
+            color: var(--cream);
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: 20px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .no-results p {
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================================================
+       FOOTER
+       ========================================================= */
+
+        footer {
+
+            border-top:
+
+                1px solid rgba(255, 255, 255, 0.08);
+
+            padding: 30px 15px 40px;
+
+            text-align: center;
+
+            color: #666d7a;
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: 0.5px;
+
+        }
+
+
+        footer strong {
+
+            color: var(--cream-dim);
+
+        }
+
+
+        /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+        @media (max-width: 850px) {
+
+            .teams-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .header {
+
+                padding-top: 40px;
+
+            }
+
+
+            .header-kicker {
+
+                font-size: 11px;
+
+                letter-spacing: 3px;
+
+            }
+
+
+            .header-title {
+
+                font-size: 48px;
+
+            }
+
+
+            .header-subtitle {
+
+                font-size: 14px;
+
+                line-height: 1.5;
+
+            }
+
+
+            .stats {
+
+                gap: 8px;
+
+            }
+
+
+            .stat-card {
+
+                padding: 17px 8px;
+
+                border-radius: 13px;
+
+            }
+
+
+            .stat-number {
+
+                font-size: 27px;
+
+            }
+
+
+            .stat-label {
+
+                font-size: 9px;
+
+                letter-spacing: 0.8px;
+
+            }
+
+
+            .team-header {
+
+                padding: 17px;
+
+                gap: 12px;
+
+            }
+
+
+            .team-logo {
+
+                width: 62px;
+
+                height: 54px;
+
+                flex-basis: 62px;
+
+                font-size: 11px;
+
+            }
+
+
+            .team-name {
+
+                font-size: 24px;
+
+            }
+
+
+            .squad-toggle {
+
+                width: calc(100% - 34px);
+
+                margin-left: 17px;
+
+                margin-right: 17px;
+
+            }
+
+
+            .players {
+
+                padding-left: 17px;
+
+                padding-right: 17px;
+
+            }
+
+
+            .player-row {
+
+                gap: 9px;
+
+            }
+
+
+            .player-number {
+
+                width: 22px;
+
+                flex-basis: 22px;
+
+            }
+
+
+            .player-avatar {
+
+                width: 35px;
+
+                height: 35px;
+
+                flex-basis: 35px;
+
+            }
+
+
+            .player-name {
+
+                font-size: 13px;
+
+            }
+
+        }
+
+
+        @media (max-width: 380px) {
+
+            .header-title {
+
+                font-size: 42px;
+
+            }
+
+
+            .stats {
+
+                gap: 5px;
+
+            }
+
+
+            .stat-number {
+
+                font-size: 23px;
+
+            }
+
+
+            .team-logo {
+
+                width: 56px;
+
+                flex-basis: 56px;
+
+            }
+
+
+            .team-name {
+
+                font-size: 22px;
+
+            }
+
+
+            .player-row {
+
+                padding: 9px;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <main class="page">
+
+
+        <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+        <header class="header">
+
+            <div class="header-kicker">
+                PCL • 2026
+            </div>
+
+            <h1 class="header-title">
+                TEAMS <span>&</span> PLAYERS
+            </h1>
+
+            <p class="header-subtitle">
+                PCL TOURNAMENT OFFICIAL TEAMS AND PLAYERS
+            </p>
+
+        </header>
+
+
+        <!-- =====================================================
+         BACK TO MAIN WEBSITE
+         ===================================================== -->
+
+        <div class="back-area">
+
+            <a href="index.html" class="back-btn">
+
+                ← Back to PCL Tournament
+
+            </a>
+
+        </div>
+
+
+        <!-- =====================================================
+         STATISTICS
+         ===================================================== -->
+
+        <section class="stats">
+
+
+            <div class="stat-card">
+
+                <span class="stat-number" id="totalTeams">
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Total Teams
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-number" id="totalPlayers">
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Total Players
+                </span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-number" id="totalOwners">
+                    0
+                </span>
+
+                <span class="stat-label">
+                    Total Owners
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =====================================================
+         SEARCH
+         ===================================================== -->
+
+        <section class="controls">
+
+            <div class="search-box">
+
+                <span class="search-icon">
+                    🔍
+                </span>
+
+                <input type="text" id="searchInput" placeholder="Search team, owner or player..." autocomplete="off">
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+         TEAM GRID
+         ===================================================== -->
+
+        <section class="teams-grid" id="teamsGrid">
+        </section>
+
+
+        <!-- =====================================================
+         NO RESULTS
+         ===================================================== -->
+
+        <div class="no-results" id="noResults">
+
+            <div class="no-results-icon">
+                🔎
+            </div>
+
+            <h3>
+                No results found
+            </h3>
+
+            <p>
+                Try another team, owner or player name.
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+    <footer>
+
+        <strong>PCL 2026</strong>
+
+        &nbsp;•&nbsp;
+
+        Teams & Players
+
+        <br><br>
+
+        Designed by <b>HONEY SONI</b>
+
+    </footer>
+
+
+
+    <script>
+
+
+        /* =========================================================
+           =========================================================
+    
+           PCL TEAM DATA
+    
+           EDIT ONLY THIS SECTION.
+    
+           8 TEAMS
+           14 PLAYERS PER TEAM
+    
+           =========================================================
+           ========================================================= */
+
+
+        const teams = [
+
+
+            /* =======================================================
+               TEAM 01
+               ======================================================= */
+
+            {
+                name: "SONU 11",
+
+                owner: "Sonu Khan & Pratap Thakur",
+
+                shortName: "SONU 11",
+
+               color: "#D4AF37",
+
+                players: [
+
+                    { name: "Pratap Thakur" },
+                    { name: "Saurabh Lodhi" },
+                    { name: "Amit Vishwakarma" },
+                    { name: "Amit Muaar" },
+                    { name: "Pushpendra Thakur" },
+                    { name: "Shivam Hero" },
+                    { name: "Mahesh Goud" },
+                    { name: "Yogi Lodhi" },
+                    { name: "Ravi Patel" },
+                    { name: "Raja Raikwar" },
+                    { name: "Keshav Ramkhriya" },
+                    { name: "Sharad Patel" }
+
+                ]
+
+            },
+
+
+            /* =======================================================
+               TEAM 02
+               ======================================================= */
+
+            {
+                name: "FRIENDS-11",
+
+                owner: "Jahar Singh Lodhi",
+
+                shortName: "FRIENDS-11",
+
+                color: "#D4AF37",
+
+                players: [
+
+                    { name: "Mahendra Guru" },
+                    { name: "Shivkant Gurjar" },
+                    { name: "Jahar Singh Lodhi" },
+                    { name: "Surendra Singh Lodhi" },
+                    { name: "Raj Karan" },
+                    { name: "Narendra Pro" },
+                    { name: "Manish Guru" },
+                    { name: "Kuldeep Rajput" },
+                    { name: "Jitendra Rajput" },
+                    { name: "Rukmesh Tiwari" },
+                    { name: "Prince Sharma" },
+                    { name: "Shubham Bharill" },
+                    { name: "Umakant Lodhi" },
+                    { name: "Kapil Lodhi" }
+
+                ]
+
+            },
+
+            /* =======================================================
+               TEAM 03
+               ======================================================= */
+
+            {
+                name: "UNIQUE-11",
+
+                owner: "Chotu Lodhi & Mehru Lodhi",
+
+                shortName: "UNIQUE-11",
+
+                color: "#D4AF37",
+
+                players: [
+
+                    { name: "Meharwan Singh Lodhi" },
+                    { name: "Ashutosh Dubey" },
+                    { name: "Prabhanshu Patkar" },
+                    { name: "Abhinay Pandey" },
+                    { name: "Mukesh Vishwakarma" },
+                    { name: "Chotu Shivam Thakur" },
+                    { name: "Rajesh Choudhary" },
+                    { name: "Deepak Kurmi" },
+                    { name: "Prem Singh Thakur" },
+                    { name: "Golu Bamki" },
+                    { name: "Pushpendra Goswami" },
+                    { name: "Gaurav Pandit" },
+                    { name: "Aniket Kurmi" }
+
+                ]
+
+            },
+
+
+            /* =======================================================
+               TEAM 04
+               ======================================================= */
+
+            {
+                name: "AJMER-11",
+
+                owner: "Ajmer Khan & Siddh Parihar",
+
+                shortName: "AJMER-11",
+
+                color: "#D4AF37",
+
+                players: [
+
+                    { name: "Aadarsh Jabalpur" },
+                    { name: "R.P Deori" },
+                    { name: "Danish Khan" },
+                    { name: "Danish" },
+                    { name: "Saurabh Thakur" },
+                    { name: "Sameem Khan" },
+                    { name: "Nirbhay Thakur" },
+                    { name: "Arpit Yadav" },
+                    { name: "Akki Maharajpur" },
+                    { name: "Prabuddh Singh" },
+                    { name: "Sahil Maharajpur" },
+                    { name: "Shyam Thakur" },
+                    { name: "Neeraj Vishwakarma" },
+                    { name: "Salman Khan" }
+
+                ]
+
+            },
+
+
+            /* =======================================================
+               TEAM 05 Done
+               ======================================================= */
+
+            {
+                name: "SUNRISE-11",
+
+                owner: "Shivham Choubey & Sunil Lodhi",
+
+                shortName: "SUNRISE-11",
+
+                color: "#D4AF37",
+
+                players: [
+
+                    { name: "Monu Thakur" },
+                    { name: "Hemraj Dangi" },
+                    { name: "Sunil Lodhi" },
+                    { name: "Suresh Lodhi" },
+                    { name: "Divyansh Sengar" },
+                    { name: "Sachin Lodhi" },
+                    { name: "Anurag Lodhi" },
+                    { name: "Ramkesh Rajak" },
+                    { name: "Golu Vishwakarma" },
+                    { name: "Ishu Thakur" },
+                    { name: "Raj Lodhi" },
+                    { name: "Pushpendr Aathiya" },
+                    { name: "Ankit Lodhi AR" },
+                    { name: "Ajay Lodhi" }
+
+                ]
+
+            },
+
+            /* =======================================================
+               TEAM 06
+               ======================================================= */
+
+            {
+                name: "YUVRAJ 11",
+
+                owner: "Yuvraj & Harshit",
+
+                shortName: "YUVRAJ 11",
+
+                color: "#D4AF37",
+
+                players: [
+
+                    { name: "Sahil Bundela" },
+                    { name: "Sahil Khan" },
+                    { name: "Gourav Sharma" },
+                    { name: "Raghvendra Bundela" },
+                    { name: "Abhishek Mirda" },
+                    { name: "KK" },
+                    { name: "Sohil Pathan" },
+                    { name: "Sandeep Patel" },
+                    { name: "Shivom Patel" },
+                    { name: "Aryan Kori" },
+                    { name: "Raj Lodhi" }
+
+                ]
+
+            },
+
+
+            /* =======================================================
+               TEAM 07
+               ======================================================= */
+
+            {
+                name: "",
+
+                owner: "Aakash Bholu Kesli",
+
+                shortName: "",
+
+                color: "#D4AF37",
+
+                players: [
+
+                    { name: "Rahul Ranipura" },
+                    { name: "Rohit Barman" },
+                    { name: "Aakash Bholu" },
+                    { name: "Jay Kumar Patel" },
+                    { name: "Aadarsh Dangi" },
+                    { name: "Sahil Savaiya" },
+                    { name: "Sandeep Rajput" },
+                    { name: "Abhishek Kurmi" },
+                    { name: "Antash Jain" },
+                    { name: "Anshul Rajput" },
+                    { name: "Aniket Thakur" },
+                    { name: "Sourabh Rajak" },
+                    { name: "Atul Vishwakarma" },
+                    { name: "Rishiraj Lodhi" },
+                    { name: "Tarun Thakur" },
+                    { name: "Sahil Samariya" }
+
+                ]
+
+            },
+
+
+            /* =======================================================
+               TEAM 08
+               ======================================================= */
+
+            {
+                name: "GK 11 DEORI",
+
+                owner: "Golu Bhai Deori",
+
+                shortName: "GK 11 DEORI",
+
+                color: "#D4AF37",
+
+                players: [
+
+                    { name: "Siddharth Deori" },
+                    { name: "Gabbar Jabalpur" },
+                    { name: "Pratik Kareli" },
+                    { name: "Anil Aathiya" },
+                    { name: "Rishiraj Lodhi" },
+                    { name: "Shivam Gautam" },
+                    { name: "Ranvijay Singh" },
+                    { name: "Bittu Dubey" },
+                    { name: "Deepak Lodhi" },
+                    { name: "Puran Kachi" },
+                    { name: "Aniket Vishwakarma" },
+                    { name: "Radhe Aathiya" },
+                    { name: "Durag Prajapati" },
+                    { name: "Jassi Maharajpur" }
+
+                ]
+
+            }
+
+        ];
+
+
+
+        /* =========================================================
+           PLAYER INITIALS
+           ========================================================= */
+
+        function getInitials(name) {
+
+            const words =
+                name
+                    .trim()
+                    .split(/\s+/)
+                    .filter(Boolean);
+
+
+            if (words.length === 1) {
+
+                return words[0]
+                    .substring(0, 2)
+                    .toUpperCase();
+
+            }
+
+
+            return (
+
+                words[0][0] +
+
+                words[words.length - 1][0]
+
+            ).toUpperCase();
+
+        }
+
+
+
+        /* =========================================================
+           RENDER TEAM
+           ========================================================= */
+
+        function renderTeam(team, index) {
+
+
+            const teamNumber =
+                String(index + 1).padStart(2, "0");
+
+
+            const playerHTML =
+
+                team.players
+
+                    .map((player, playerIndex) => {
+
+
+                        const playerNumber =
+
+                            String(playerIndex + 1)
+                                .padStart(2, "0");
+
+
+                        const initials =
+                            getInitials(player.name);
+
+
+                        return `
+
+              <div
+                class="player-row"
+                data-player-name="${player.name.toLowerCase()}"
+              >
+
+                <div class="player-number">
+                  ${playerNumber}
+                </div>
+
+
+                <div class="player-avatar">
+                  ${initials}
+                </div>
+
+
+                <div class="player-name">
+                  ${player.name}
+                </div>
+
+              </div>
+
+            `;
+
+                    })
+
+                    .join("");
+
+
+
+            return `
+
+        <article
+          class="team-card"
+          style="--team:${team.color}"
+          data-team-name="${team.name.toLowerCase()}"
+          data-owner-name="${team.owner.toLowerCase()}"
+        >
+
+
+          <div class="team-strip"></div>
+
+
+          <div class="team-header">
+
+
+            <!-- TEAM SHORT NAME -->
+
+            <div class="team-logo">
+              ${team.shortName}
+            </div>
+
+
+            <div class="team-meta">
+
+
+              <span class="team-number">
+                TEAM ${teamNumber}
+              </span>
+
+
+              <h2 class="team-name">
+                ${team.name}
+              </h2>
+
+
+              <div class="team-owner">
+
+                Owner:
+
+                <strong>
+                  ${team.owner}
+                </strong>
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+
+          <!-- SQUAD BUTTON -->
+
+          <button
+            class="squad-toggle"
+            type="button"
+            aria-expanded="false"
+          >
+
+
+            <span class="toggle-left">
+
+              <span>
+                FULL SQUAD
+              </span>
+
+              <span class="toggle-count">
+                ${team.players.length} PLAYERS
+              </span>
+
+            </span>
+
+
+            <span class="arrow">
+              ▼
+            </span>
+
+
+          </button>
+
+
+
+          <!-- SQUAD -->
+
+          <div class="squad-panel">
+
+            <div class="squad-inner">
+
+              <div class="players">
+
+                ${playerHTML}
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </article>
+
+      `;
+
+        }
+
+
+
+        /* =========================================================
+           DISPLAY ALL TEAMS
+           ========================================================= */
+
+        const teamsGrid =
+            document.getElementById("teamsGrid");
+
+
+        teamsGrid.innerHTML =
+            teams.map(renderTeam).join("");
+
+
+
+        /* =========================================================
+           AUTOMATIC STATISTICS
+           ========================================================= */
+
+        const totalTeams =
+            teams.length;
+
+
+        const totalPlayers =
+            teams.reduce(
+
+                (total, team) =>
+
+                    total + team.players.length,
+
+                0
+
+            );
+
+
+        const totalOwners =
+
+            new Set(
+
+                teams.map(
+                    team => team.owner
+                )
+
+            ).size;
+
+
+
+        document.getElementById("totalTeams")
+            .textContent = totalTeams;
+
+
+        document.getElementById("totalPlayers")
+            .textContent = totalPlayers;
+
+
+        document.getElementById("totalOwners")
+            .textContent = totalOwners;
+
+
+
+        /* =========================================================
+           ACCORDION
+           ========================================================= */
+
+        document
+            .querySelectorAll(".squad-toggle")
+            .forEach(button => {
+
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+
+                        const card =
+                            button.closest(".team-card");
+
+
+                        const isOpen =
+                            card.classList.toggle("open");
+
+
+                        button.setAttribute(
+                            "aria-expanded",
+                            isOpen ? "true" : "false"
+                        );
+
+
+                    }
+                );
+
+            });
+
+
+
+        /* =========================================================
+           SEARCH
+           ========================================================= */
+
+        const searchInput =
+            document.getElementById("searchInput");
+
+
+        const noResults =
+            document.getElementById("noResults");
+
+
+
+        function filterTeams() {
+
+
+            const search =
+
+                searchInput.value
+                    .trim()
+                    .toLowerCase();
+
+
+            let visibleTeams = 0;
+
+
+
+            document
+                .querySelectorAll(".team-card")
+                .forEach(card => {
+
+
+                    const teamName =
+                        card.dataset.teamName;
+
+
+                    const ownerName =
+                        card.dataset.ownerName;
+
+
+                    const players =
+
+                        [
+                            ...card.querySelectorAll(
+                                ".player-row"
+                            )
+                        ];
+
+
+
+                    /* ===================================================
+                       CHECK TEAM / OWNER
+                       =================================================== */
+
+                    const teamOwnerMatch =
+
+                        !search ||
+
+                        teamName.includes(search) ||
+
+                        ownerName.includes(search);
+
+
+
+                    /* ===================================================
+                       CHECK PLAYERS
+                       =================================================== */
+
+                    let playerMatch = false;
+
+
+                    players.forEach(player => {
+
+
+                        const playerName =
+                            player.dataset.playerName;
+
+
+                        const matches =
+
+                            !search ||
+
+                            playerName.includes(search);
+
+
+                        player.style.display =
+                            matches ? "" : "none";
+
+
+                        if (
+                            search &&
+                            playerName.includes(search)
+                        ) {
+
+                            playerMatch = true;
+
+                        }
+
+                    });
+
+
+
+                    /* ===================================================
+                       TEAM VISIBILITY
+                       =================================================== */
+
+                    const showTeam =
+
+                        !search ||
+
+                        teamOwnerMatch ||
+
+                        playerMatch;
+
+
+
+                    card.style.display =
+                        showTeam ? "" : "none";
+
+
+                    if (showTeam) {
+
+                        visibleTeams++;
+
+                    }
+
+
+                    /* ===================================================
+                       IF TEAM OR OWNER WAS SEARCHED,
+                       SHOW ALL PLAYERS AGAIN
+                       =================================================== */
+
+                    if (
+                        search &&
+                        teamOwnerMatch
+                    ) {
+
+                        players.forEach(player => {
+
+                            player.style.display = "";
+
+                        });
+
+                    }
+
+
+                });
+
+
+
+            noResults.classList.toggle(
+                "show",
+                visibleTeams === 0
+            );
+
+        }
+
+
+
+        searchInput.addEventListener(
+            "input",
+            filterTeams
+        );
+
+
+
+        /* =========================================================
+           STAGGERED TEAM ANIMATION
+           ========================================================= */
+
+        document
+            .querySelectorAll(".team-card")
+            .forEach((card, index) => {
+
+                card.style.animationDelay =
+                    `${index * 70}ms`;
+
+            });
+
+
+    </script>
+
+
+</body>
+
+</html>
